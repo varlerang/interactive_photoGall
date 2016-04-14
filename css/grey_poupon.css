@@ -1,72 +1,68 @@
 @charset "UTF-8";
 /* CSS Document */
+  
+
+     @media (min-width: 1024px ) {
+
+
 
 			* {
 			 box-sizing: border-box;
 			}
 			
+					  
+					  
+					  body {
+						  margin: 0 auto;
+						 
+					  }
+					  
+								 .lattice {
+										 border: 1px solid green;
+								 }
+										 
+						                  	 header {
 			
-			
-			body {
-				margin: 0;
-				margin-top: 120px;
-			}
-			
-				 border: 1px solid green;
-				 width: 100%;
-				 margin: 0 auto;
+											 }
 				 
+				                                             input[type="text"] {
+								                              margin-top: 30px;
+															  margin-bottom: 30px;
+															  width: 40%;
+															  padding: 8px;
+														  }
+				 
+				 
+				 
+				             								  .photo-container {
+					
+															  }
+					       
+					.main-head {
+						
+					}
+					
+						      
+								
+								.pic-nav {
+								
+								}
+							
+								
+								
+						
+				  
+				
+	 }
+				  
+				 	  
+				  
 				 
 				
-			 }
+			
 			 
 			
 				  
-			 header {
-				  position: fixed;
-				  width: 100%;
-				  background-color: #fff;
-				   border: 1px solid red;
-				  top: 0;
-				   text-align: center;
-				 
-				  }
-				  
-					  .photo-container {
-						border: 1px solid black;
-					  width: 980px;	
-					  margin: 0 auto;
-					  padding: 10px;
-					  
-					}
-				  
-				  
-								input[type="text"] {
-									display: inline-block;
-									
-									margin-top: 30px;
-									margin-bottom: 30px;
-									width: 40%;
-									padding: 8px;
-								}
-								
-								.pic-nav,
-								li,
-								li img {
-									display: inline-block;
-									float: left;
-								    
-									margin-left: 30px;
-									
-									
-								}
-								
-								.clearfix:before {
-								 content: "";
-								 display: table;
-								 clear: both;	
-									
-								}
+		
 				  
 				
-			
