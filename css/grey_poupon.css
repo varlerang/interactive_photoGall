@@ -26,37 +26,33 @@
 											   justify-content: center;
 											   align-items: center;
 					                          }
-						                 
-				 
-				                                             input[type="text"] {
-																 
+						                                      input[type="text"] {
+																margin-top: 30px;
+																margin-bottom: 30px;
+																width: 40%;
+																padding: 8px;
+													          }
 														      
-								                              margin-top: 30px;
-															  margin-bottom: 30px;
-															  width: 40%;
-															  padding: 8px;
-														  }
+								                          .photo-container {
+					                                      border: 1px solid tomato;
+														  
+						       }
 				 
-				 
-				 
-				             								  .photo-container {
-					                                             
-																 
-															  }
-					       
-				
-					
-						      
+				     			
+							   
+					 .pic-nav {
+						display: flex;
+						flex-wrap: wrap;
+					    width: 980px;
+					    justify-content: space-around;
+						margin: 0 auto;
+					}			
 								
-								.pic-nav {
-									
-								 display: flex;
-								 flex-wrap: wrap;
-								 width: 980px;
-								 
-								 justify-content: space-around;
-								}
-							
+						li {
+						  flex-basis: 200px;
+						  margin-bottom: 	
+						  margin-left: 
+						}
 							
 				  
 				
