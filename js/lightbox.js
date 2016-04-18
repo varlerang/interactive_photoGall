@@ -16,22 +16,18 @@
 	 $("body").append($overlay);
 	 
 	 
-	  $(".pic-nav li ").click( function(e) {
+	  $(".pic-nav li a").click( function(e) {
 		  
 		   e.preventDefault();
 		   
-		   var loc = $(this).attr("src");
-		   
-		    $image.attr("src", loc);
+		   var loc = $(this).attr("href");
+		 
+		    $image.attr("href", loc);
 			
-			$overlay.show();
+	 });
 		  
 		  
-	  });
-		  
-		  
-		  
-		  
+		
 		  
 		  
 		  
