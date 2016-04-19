@@ -7,9 +7,7 @@
   
      var $image = $("<img>");
 	 
-	  
-  
-     var $overlay = $('<div id="overlay"></div>');
+	  var $overlay = $('<div id="overlay"></div>');
 	
 	  $overlay.append($image);
 	  
@@ -24,12 +22,13 @@
 		 
 		    $image.attr("href", loc);
 			
+			$overlay.show();
+			
 	 });
 		  
 		  
 		
-		  
-		  
+		    
 		  
 
 	  
