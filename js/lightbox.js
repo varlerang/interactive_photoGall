@@ -20,7 +20,7 @@
 		   
 		   var loc = $(this).attr("href");
 		 
-		    $image.attr("href", loc);
+		    $image.attr("src", loc);
 			
 			$overlay.show();
 			
