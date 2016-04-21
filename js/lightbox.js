@@ -1,7 +1,7 @@
 // JavaScript Document
 
   // appending div to the body //
-  
+     
   
 	  var $para = $("<p></p>");
   
