@@ -2,6 +2,9 @@
 
   // appending div to the body //
      
+	  var $arrow1 = $("<img src='icon/arrows.svg/>' ");
+	  
+	  var $arrow2 = $("<img src='icon/arrows-1.svg/>' ");
   
 	  var $para = $("<p></p>");
   
@@ -9,7 +12,7 @@
 	 
 	  var $overlay = $("<div id='overlay'></div>");
 	  
-	  
+	
 	  
 	  
 	  
@@ -17,10 +20,13 @@
 	  
 	  
 	  
-	  
 	 
 	
 	  $overlay.append($image);
+	  
+	 $overlay.append($arrow1);
+	 
+	 $overlay.append($arrow2);
 	  
 	  $overlay.append($para);
 	  
@@ -48,8 +54,12 @@
 			 var captionTex = $(this).children("img").attr("alt");
 		
 			 $para.text(captionTex);
-			
-			
+			 
+		
+		
+			 
+			  
+		
 	 });
 		  
 		 $image.click( function() {
