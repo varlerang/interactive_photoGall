@@ -2,9 +2,9 @@
 
   // appending div to the body //
      
-	  var $arrow1 = $("<img src='icon/arrows.svg/>' ");
+	  var $arrow1 = $("<img id='arow1' src='icon/arrows.svg'/>" );
 	  
-	  var $arrow2 = $("<img src='icon/arrows-1.svg/>' ");
+	  var $arrow2 = $("<img id='arow2' src='icon/arrows-1.svg'/>");
   
 	  var $para = $("<p></p>");
   
