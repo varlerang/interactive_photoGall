@@ -8,10 +8,16 @@
   
 	  var $para = $("<p></p>");
   
-     var $image = $("<img>");
+     var $image = $("<img id='imgov'>");
 	 
 	  var $overlay = $("<div id='overlay'></div>");
 	  
+	  
+	  
+	  var $main =  $(".pic-nav li a");
+	  
+	 
+	 
 	
 	  
 	  
@@ -26,7 +32,7 @@
 	  
 	 $overlay.append($arrow1);
 	 
-	 $overlay.append($arrow2);
+	 $overlay.append($arrow2 );
 	  
 	  $overlay.append($para);
 	  
@@ -36,31 +42,68 @@
 	 // iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			//
 	 
 	 
-	  $(".pic-nav li a").click( function(e) {
-		  
-		   e.preventDefault();
-		   
-		   var imageLoc = $(this).attr("href");
-		     
-			
-		
-		    $image.attr("src", imageLoc);
-			
-			
-			$overlay.show();
-			
-			
-			
-			 var captionTex = $(this).children("img").attr("alt");
-		
-			 $para.text(captionTex);
-			 
-		
-		
-			 
+				$main.click( function(e) {
+					
+					 e.preventDefault();
+					 
+					 var imageLoc = $(this).attr("href");
+					   
+					 $image.attr("src", imageLoc);
+					  
+					 $overlay.show();
+					  
+					 var captionTex = $(this).children("img").attr("alt");
+				   
+					 $para.text(captionTex);
+				  
+			   });
+			   
+			   
+			   // ************  rIgHt ClIcK aRrOw ******************** //
+			   
+			   
+			   
+			   
+			     $arrow1.click( function(e) {
+					 
+					   e.preventDefault();
+					 
+				     var $nextImgLoc =  $(this).attr("href");
+					 
+					  $image.next().children("img").attr("src" , $nextImgLoc );
+				   
+				    var nextCapTex =  $main.next().children("img").attr("alt");
+					
+					$para.text(nextCapTex);
+					 
+				 });
+		    
+		             
+	
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ //	
+	
+	 
+	 
+	 	 $arrow1.hover( function() {
 			  
-		
-	 });
+			$arrow1.toggle();
+	
+			 
+		 });
+		 
+		 
+		 $arrow2.hover( function() {
+			  
+			   $arrow2.toggle();
+			 
+		 });
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		  
 		 $image.click( function() {
 			 
@@ -69,7 +112,7 @@
 		 });
 		
 		    
-		  
+	
 
 	  
 	 

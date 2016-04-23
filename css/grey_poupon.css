@@ -13,7 +13,7 @@
 		position:fixed;
 	}
 	
-	#overlay img  {
+	#overlay #imgov  {
 		display: flex;
 	 	width: 700px;
         justify-content: center;
@@ -34,15 +34,25 @@
 	  #overlay #arow1,
 	    #overlay   #arow2 {
 		  background-color: tomato; 
-		  position: relative;
-		  width: 50px;
-		  height: 50px;
-		  
-	  }
+		  position: absolute;
+		  width: 60px;
+		
+	 }
 	  
-	  #ovelay #arow1 {
-		  margin: 0;
-	  }
+   #overlay #arow1 {
+		
+	   bottom: 480px;
+	    left: 250px;
+	}
+	
+	#arow2 {
+		
+		left: 1340px;
+		bottom: 480px;
+	}
+	
+	  
+
 
 
 
