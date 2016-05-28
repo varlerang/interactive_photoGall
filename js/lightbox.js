@@ -39,6 +39,8 @@
 	 $("body").append($overlay);
 	 
 	 
+	  $overlay.hide();
+	 
 	 // iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			//
 	 
 	 
@@ -68,11 +70,11 @@
 					 
 					   e.preventDefault();
 					 
-				     var $nextImgLoc =  $(this).attr("href");
+				     var $nextImgLoc =  $image.next().attr("href");
 					 
-					  $image.next().children("img").attr("src" , $nextImgLoc );
+					  $image.attr("src" , $nextImgLoc );
 				   
-				    var nextCapTex =  $main.next().children("img").attr("alt");
+				    var nextCapTex =  $image.next().children("img").attr("alt");
 					
 					$para.text(nextCapTex);
 					 
