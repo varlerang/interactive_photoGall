@@ -2,9 +2,9 @@
 
   // appending div to the body //
      
-	  var $arrow1 = $("<img id='arow1' src='icon/arrows.svg'/>" );
+	  var $arrow1 = $("<img id='arrow1' src='icon/arrows.svg'/>" );
 	  
-	  var $arrow2 = $("<img id='arow2' src='icon/arrows-1.svg'/>");
+	  var $arrow2 = $("<img id='arrow2' src='icon/arrows-1.svg'/>");
   
 	  var $para = $("<p></p>");
   
@@ -86,33 +86,7 @@
 	
 	 
 	 
-	 	 $arrow1.hover( function() {
-			  
-			$arrow1.toggle();
-	
-			 
-		 });
-		 
-		 
-		 $arrow2.hover( function() {
-			  
-			   $arrow2.toggle();
-			 
-		 });
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		  
-		 $image.click( function() {
-			 
-			 $overlay.hide(); 
-			 
-		 });
-		
+	 	
 		    
 	
 
