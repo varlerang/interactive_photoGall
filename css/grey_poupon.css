@@ -16,7 +16,7 @@
 	  
 	}
 	
-	 .overlay .picture  {
+	 .overlay .pic  {
 		 
 	  display: flex;
 	  width: 700px;
@@ -26,7 +26,7 @@
 	  
 	}
 	
-	 .overlay p {
+	 .overlay  p {
 		 
 	  text-align: center;
 	  margin-top: 30px;
@@ -36,7 +36,12 @@
 	  font-weight: bold;
 	   
 	 }
-	 
+	 .arrowContainer1 {
+		 border: 1px solid tomato;
+		 width: 100px
+		 height: 50px;
+		 
+	 }
 	.overlay .arrow1,
 	.overlay  .arrow2 {
 		

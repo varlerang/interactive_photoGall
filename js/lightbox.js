@@ -1,9 +1,9 @@
 // JavaScript Document
 
   // appending div to the body //
-      var $ArrowContainer1 = $("div class='arrowContainer1'></div>");
+      var $arrowContainer1 = $("div class='arrowContainer1'></div>");
 	  
-	  var $ArrowContainer2 = $("div class='arrowContainer2'></div>");
+	  var $arrowContainer2 = $("div class='arrowContainer2'></div>");
 
 	  var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>" );
 	  
@@ -11,7 +11,7 @@
   
 	  var $para = $("<p></p>");
   
-     var $image = $("<img class='picture'/>");
+     var $image = $("<img class='pic'/>");
 	 
 	 var $overlay = $("<div class='overlay'></div>");
 	  
@@ -31,9 +31,9 @@
 	
 	  $overlay.append($image);
 	  
-	 $overlay.append($arrow1);
+	 $overlay.append( $arrow1 ).append( $arrowContainer1 );
 	 
-	 $overlay.append($arrow2 );
+	 $overlay.append($arrow2 ).append( $arrowContainer2 );
 	  
 	  $overlay.append($para);
 	  
@@ -52,12 +52,17 @@
 					 var imageLoc = $(this).attr("href");
 					   
 					 $image.attr("src", imageLoc);
-					  
-					 $overlay.show();
-					  
+					 
+					 
+					 
 					 var captionTex = $(this).children("img").attr("alt");
 				   
-					 $para.text(captionTex);
+					 $para.text( captionTex );
+					 
+					 
+					 
+					 					 $overlay.show();
+
 				  
 			   });
 			   
