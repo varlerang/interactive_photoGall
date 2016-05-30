@@ -9,8 +9,7 @@
 	  var $para = $("<p></p>");
   
      var $image = $("<img id='imgov'>");
-	 
-	  var $overlay = $("<div id='overlay'></div>");
+	 	  var $overlay = $("<div id='overlay'></div>");
 	  
 	  
 	  
