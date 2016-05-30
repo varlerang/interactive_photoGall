@@ -1,17 +1,19 @@
 // JavaScript Document
 
   // appending div to the body //
-     
-	  var $arrow1 = $("<img id='arrow1' src='icon/arrows.svg'/>" );
+      var $ArrowContainer1 = $("div class='arrowContainer1'></div>");
 	  
-	  var $arrow2 = $("<img id='arrow2' src='icon/arrows-1.svg'/>");
+	  var $ArrowContainer2 = $("div class='arrowContainer2'></div>");
+
+	  var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>" );
+	  
+	  var $arrow2 = $("<img class='arrow2' src='icon/arrows-1.svg'/>");
   
 	  var $para = $("<p></p>");
   
-     var $image = $("<img id='imgov'>");
-	 	  var $overlay = $("<div id='overlay'></div>");
-	  
-	  
+     var $image = $("<img class='picture'/>");
+	 
+	 var $overlay = $("<div class='overlay'></div>");
 	  
 	  var $main =  $(".pic-nav li a");
 	  
@@ -59,31 +61,7 @@
 				  
 			   });
 			   
-			   
-			   // ************  rIgHt ClIcK aRrOw ******************** //
-			   
-			   
-			   
-			   
-			     $arrow1.click( function(e) {
-					 
-					   e.preventDefault();
-					 
-				     var $nextImgLoc =  $image.next().attr("href");
-					 
-					  $image.attr("src" , $nextImgLoc );
-				   
-				    var nextCapTex =  $image.next().children("img").attr("alt");
-					
-					$para.text(nextCapTex);
-					 
-				 });
-		    
-		             
-	
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ //	
-	
-	 
+		
 	 
 	 	
 		    

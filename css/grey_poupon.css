@@ -2,44 +2,50 @@
 /* CSS Document */
   
 
-    #overlay {
-		display: none;
-		
-	 background-color: rgba(0,0,0,0.7);
-	 	width:100%;
-		height:100%;
-		top:0;
-		left:0;
-		position:fixed;
-	}
-	
-	#overlay #imgov  {
-		display: flex;
-	 	width: 700px;
-        justify-content: center;
-		margin: auto;
-		margin-top: 280px;
-	}
-	
-	 #overlay p {
-		text-align: center;
-		margin-top: 30px;
-		color: #fff;
-		font-family : Helvetica, Arial, San-serif;
-		letter-spacing: 0.10em;
-		font-weight: bold;
+  
+	  
+  	 .overlay {
 		 
+	  display: none;
+	  background-color: rgba(0,0,0,0.7);
+	  width:100%;
+	  height:100%;
+	  top:0;
+	  left:0;
+	  position:fixed;
+	  
+	}
+	
+	 .overlay .picture  {
+		 
+	  display: flex;
+	  width: 700px;
+	  justify-content: center;
+	  margin: auto;
+	  margin-top: 280px;
+	  
+	}
+	
+	 .overlay p {
+		 
+	  text-align: center;
+	  margin-top: 30px;
+	  color: #fff;
+	  font-family : Helvetica, Arial, San-serif;
+	  letter-spacing: 0.10em;
+	  font-weight: bold;
+	   
 	 }
 	 
-	    #overlay #arrow1,
-	    #overlay  #arrow2 {
-		  background-color: tomato; 
-		  position: absolute;
-		  width: 50px;
+	.overlay .arrow1,
+	.overlay  .arrow2 {
 		
-	 }
-	  
-  
+	  background-color: tomato; 
+	  position: absolute;
+	  width: 50px;
+	
+	 }	  
+	 
 	
 	  
 
@@ -50,74 +56,66 @@
 
 	  
 	  
-			* {
-				
-			 box-sizing: border-box;
-			 
-			}
+	  * {
+		  
+	   box-sizing: border-box;
+	   
+	  }
+
+		  
+		  
+	  body {
+		  
+	  padding-top: 110px;
 	  
+		 
+	  }
+		  
 				
-				
-			body {
-				
-			padding-top: 110px;
+	.main-head {
+		
+	 display: flex;
+	 position: fixed;
+	 background-color: #fff;
+	 width: 100%;
+	 top: 0;
+	 justify-content: center;
+	 align-items: center;
+	   
+  	}
+						
+	input[type="text"] {
+	  margin-top: 35px;
+	  margin-bottom: 30px;
+	  width: 40%;
+	  padding: 8px;
+	}
 			
-			   
-			}
-					  
-			
-							
-		  .main-head {
-			  
-			 display: flex;
-			 position: fixed;
-			 background-color: #fff;
-			 width: 100%;
-			 top: 0;
-			 justify-content: center;
-			 align-items: center;
-			 
-			 
-			}
-							  
-			input[type="text"] {
-			  margin-top: 35px;
-			  margin-bottom: 30px;
-			  width: 40%;
-			  padding: 8px;
-			}
-			
-	 .photo-container {
-		border: 1px solid tomato;
-  
-	 }
+   .photo-container {
+	  border: 1px solid tomato;
+
+   }
  
 				
 			   
-	 .pic-nav {
-		display: flex;
-		flex-wrap: wrap;
-		width: 980px;
-		justify-content: space-between;
-		margin: 0 auto;
-	 }			
+   .pic-nav {
+	  display: flex;
+	  flex-wrap: wrap;
+	  width: 980px;
+	  justify-content: space-between;
+	  margin: 0 auto;
+   }			
 				
 		
-		
-		li  {
-		  flex-basis: 220px;
-		  margin-bottom: 40px;	
-		  
-		 
-		}
-			
-
-
-
-
-
-			
-	 }
+	
+	li  {
+	  flex-basis: 220px;
+	  margin-bottom: 40px;	
+	  
+	 
+	}
+	
+ }
 				  
 				 	  
 				  
