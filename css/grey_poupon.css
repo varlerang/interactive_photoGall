@@ -39,7 +39,7 @@
 		 border: 1px solid yellow;
 		 width: 960px;
 		 margin: 0 auto;
-		 margin-top: 18px;
+		 margin-top: 20px;
 		 text-align: center;
 		 margin-left: 424px;
 		
@@ -71,6 +71,8 @@
 	.arrow1 {
 		float: left; 
 		margin-top: 520px;
+		margin-left: 300px;
+		margin-right: -300px;
 		
 	 }
 	 
@@ -78,6 +80,8 @@
 	 .arrow2 {
 		float: right; 
 		margin-top: 520px;
+		margin-right: 278px;
+		margin-left: -300px;
 		
 	 }
 	 
