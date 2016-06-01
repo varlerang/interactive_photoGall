@@ -1,8 +1,9 @@
 // JavaScript Document
 
   // appending div to the body //
-  
-  
+       
+      var $wrapper = $("<div class='wrap'></div>");
+	  
       var $arrowContainer1 = $("<div class='arrowContainer1'></div>");
 	  
 	  var $arrowContainer2 = $("<div class='arrowContainer2'></div>");
@@ -39,20 +40,23 @@
 	  
 	  
 	  
-	  $imgContainer.append( $image );
 	
-	  $overlay.append( $imgContainer );
+	    $imgContainer.append( $image);
 	  
 	  
 	   $arrowContainer1.append( $arrow1 );
 	   
 	   $arrowContainer2.append( $arrow2 );
 	  
-	 $overlay.append( $arrowContainer1 ).append( $arrowContainer2 );
+	
 	
 	    $textContainer.append($para);
 		
-	  $overlay.append( $textContainer );
+	 
+	  
+	   $wrapper.append( $imgContainer).append( $arrowContainer1 ).append( $arrowContainer2).append($textContainer);
+	   
+	   $overlay.append( $wrapper );
 	  
 	 $("body").append($overlay);
 	 
