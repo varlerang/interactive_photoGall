@@ -40,24 +40,27 @@
 	  
 	  
 	  
-	
+	  
+	  
 	  
 	  
 	   $arrowContainer1.append( $arrow1 );
 	   
 	   $arrowContainer2.append( $arrow2 );
 	   
-	    $textContainer.append( $para );
-		
-	  $imgContainer.append( $image );
-	  
-	   $wrapper.append($arrowContainer1).append( $imgContainer).append( $arrowContainer2).append( $textContainer );
-	  
-     
 	 
-	   $overlay.append( $wrapper );
+	   
+	   $imgContainer.append( $image );
+		
+	   $textContainer.append( $para );
+	   
+	   $wrapper.append( $arrowContainer1 ).append( $arrowContainer2 ).append( $imgContainer ).append( $textContainer );
+	   
 	  
-	 $("body").append( $overlay );
+	   $overlay.append( $wrapper );
+	   
+	  
+	   $("body").append( $overlay );
 	 
 	 
 	  $overlay.hide();
