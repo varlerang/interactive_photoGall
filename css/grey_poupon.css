@@ -21,7 +21,8 @@
 		display: block;
 		border: 1px solid lightblue;
 		 margin: 0 auto;
-		 margin-top: 152px;
+		 margin-top: 194px;
+		 padding: 10px 15px 10px 15px;
 	}
 	
 	.overlay  .imageCon {
@@ -49,7 +50,8 @@
 	   border: 1px solid pink;
 	   text-align: center;
 	   margin: 0 auto;
-	   margin-top: 38px;
+	   margin-top: 42px;
+	   width: 600px;
 	  
 	   
 	 }
@@ -62,8 +64,10 @@
 	  font-family : Fanwood Text,  Helvetica, Arial, serif, San-serif;
 	  font-size: 1.25rem;
 	  font-weight: light;
+	  letter-spacing: 0.1em;
 	  word-spacing: 0.2em;
 	  padding: 2px 8px 2px 8px;
+	  color: rgb(224, 226, 227 );
 	  
 	 }
 	 
@@ -85,7 +89,6 @@
 	.overlay  .arrow2 {
 		
 		display: inline-block;
-	  background-color: tomato; 
 	   width: 55%;
 	   
 	 }	  
@@ -145,7 +148,6 @@
 	  body {
 		  
 	  padding-top: 110px;
-	  
 		 
 	  }
 		  
@@ -170,8 +172,12 @@
 	}
 			
    .photo-container {
+	   display: block;
 	  border: 1px solid tomato;
-
+	 margin: 0 auto;
+	  width: 1100px;
+	  padding-left: 50px;
+	  padding-top: 40px;
    }
  
 				
@@ -181,7 +187,7 @@
 	  flex-wrap: wrap;
 	  width: 980px;
 	  justify-content: space-between;
-	  margin: 0 auto;
+	  
    }			
 				
 		
