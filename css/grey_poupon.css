@@ -21,32 +21,35 @@
 		display: block;
 		border: 1px solid lightblue;
 		 margin: 0 auto;
+		 margin-top: 152px;
 	}
 	
 	.overlay  .imageCon {
 		
 		display: block;
 		border: 1px solid yellow;  
-		width: 962px;
-		height: 600px;
 		margin: 0 auto;
+		width: 902px;
+		
 
 	  }
 	
 	 .overlay .pic  {
 		 
 	   display: inline-block;
-	   width: 98%;
+	   width:900px;
+	   height: 600px;
+	   margin: 0 auto;
 	   
    	}
 	
 	 .overlay .captionText {
 		 
 	   display: block;
-	   border: 1px solid yellow;
+	   border: 1px solid pink;
 	   text-align: center;
 	   margin: 0 auto;
-	   margin-top: 28px;
+	   margin-top: 38px;
 	  
 	   
 	 }
@@ -83,21 +86,21 @@
 		
 		display: inline-block;
 	  background-color: tomato; 
-	   width: 85%;
+	   width: 55%;
 	   
 	 }	  
 	 
 	.overlay .arrow1 {
 		
-	  margin-top: 7px;
-	  margin-left: 7px;	 
+	  margin-top: 22px;
+	  margin-left: 22px;	 
 		 
 	 }
 	 
 	 .overlay .arrow2 {
 		 
-		 margin-top: 7px;
-		 margin-right: 7px;
+		 margin-top: 22px;
+		 margin-right: 22px;
 		 
 	 }
 	 
@@ -107,7 +110,8 @@
 		
 		display : inline-block;
 		float: left;
-		
+		margin-top: 290px;
+		margin-left: 60px;
 	 }
 	 
 	 .arrowContainer2,
@@ -115,6 +119,8 @@
 		 
 		 display : inline-block;
 		 float: right;
+		 		margin-top: 290px;
+        margin-right: 60px;
 	 }
 	 
 	
