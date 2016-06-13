@@ -2,81 +2,74 @@
 
   // appending div to the body //
        
-      var $wrapper = $("<div class='wrap'></div>");
-	  
-      var $arrowContainer1 = $("<div class='arrowContainer1'></div>");
-	  
-	  var $arrowContainer2 = $("<div class='arrowContainer2'></div>");
+			  var $wrapper = $("<div class='wrap'></div>");
+			  
+			   var $photoViewer = $("<div id='photoview'></div>");
+			   
+			  var $image = $("<img class='pic'/>");
 
-	  var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>" );
-	  
-	  var $arrow2 = $("<img class='arrow2' src='icon/arrows-1.svg'/>");
-	  
-	  
-	  
-	  var $textContainer = $("<div class='captionText'></div>");
-  
-	  var $para = $("<p></p>");
-	  
-	  
-	  
-	  var $imgContainer = $("<div class='imageCon'></div>");
-  
-     var $image = $("<img class='pic'/>");
-	 
-	 
-	 
-	 var $overlay = $("<div class='overlay'></div>");
-	  
-	  var $main =  $(".pic-nav li a");
-	  
-	 
+			  
+			  var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>");
+			  
+			  
+			  var $arrow2 = $("<img class='arrow2' src='icon/arrows-1.svg'/>");
+			  
+			  
+			   var $textContainer = $("<div class='captionText'></div>");
+			   
+		  
+			  var $para = $("<p></p>");
+			  
+			  
+			  var $overlay = $("<div class='overlay'></div>");
+			 
+			  
+			  var $main =  $(".pic-nav li a");
+			  
+			 
 	 
 	
 	  
 	  
 	  
-	  //				 AdDiNg OvErLaY aNd iMaGe WiTh TeXt 			//
+	  //**************************************aPpEnDiNg ***********************************//
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	   $arrowContainer1.append( $arrow1 );
+	   $photoViewer.append( $image );
 	   
-	   $arrowContainer2.append( $arrow2 );
-	   
-	 
-	   
-	   $imgContainer.append( $image );
-		
 	   $textContainer.append( $para );
-	   
-	   $wrapper.append( $arrowContainer1 ).append( $arrowContainer2 ).append( $imgContainer ).append( $textContainer );
-	   
 	  
-	   $overlay.append( $wrapper );
-	   
+	  $wrapper.append( $photoViewer ).append( $arrow1 ).append( $arrow2 ).append( $textContainer );
 	  
-	   $("body").append( $overlay );
+	  $overlay.append( $wrapper );
+	   
+		$("body").append( $overlay );
+	  
+	  
 	 
 	 
 	  $overlay.hide();
+	  
+	  
 	 
 	 // iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			//
 	 
 	 
+				
+				
+				
 				$main.click( function(e) {
 					
-					 e.preventDefault();
+					
+				 e.preventDefault();
+				 
+				 
 					 
 					 var imageLoc = $(this).attr("href");
 					   
 					 $image.attr("src", imageLoc);
 					 
-					  $overlay.show();
+					 
+					   $overlay.show();
 
 					 
 					 var captionTex = $(this).children("img").attr("alt");
@@ -84,13 +77,16 @@
 					 $para.text( captionTex );
 					 
 					 
-					 
 
-				  
-			   });
+					 
+					 
+			  });
 			   
 		
-	 
+	            
+				   
+				     
+					  
 	 	
 		    
 	

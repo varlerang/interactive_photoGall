@@ -1,70 +1,50 @@
-@charset "UTF-8";
 /* CSS Document */
   
 
   
 	  
   	 .overlay {
-		 
+	
 	  display: none;
 	  background-color: rgba(0,0,0,0.7);
-	  top:0;
-	  left:0;
+	  top: 0;
+	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  position:fixed;
+	  position: fixed;
 	  
 	}
 	
-	 .overlay .wrap {
+	
+	.overlay .wrap {
+		position: absolute;
+	  display: block;
+	  width: 96%;
+	  border: 1px solid green;	
 		
-		display: block;
-		border: 1px solid lightblue;
-		 margin: 0 auto;
-		 margin-top: 194px;
-		 padding: 10px 15px 10px 15px;
 	}
 	
-	.overlay  .imageCon {
-		
-		display: block;
-		border: 1px solid yellow;  
-		margin: 0 auto;
-		width: 902px;
-		
-
-	  }
-	
-	 .overlay .pic  {
-		 
-	   display: inline-block;
-	   width:900px;
-	   height: 600px;
-	   margin: 0 auto;
-	   
-   	}
-	
-	 .overlay .captionText {
-		 
-	   display: block;
-	   border: 1px solid pink;
-	   text-align: center;
-	   margin: 0 auto;
-	   margin-top: 42px;
-	   width: 600px;
-	  
-	   
+	.overlay #photoViewer {
+		 position: absolute;
+		 display: inline-block;
+		 max-width: 100%;
+		 max-height: 100%;
 	 }
+	
+	.overlay .captionText {
+		
+	   display : block;
+	   border: 1px solid teal;	
+	   
+	}
 	
 	 .overlay  p {
 		 
-	  display: inline-block;
 	  border: 1px solid tomato;
 	  color: #fff;
 	  font-family : Fanwood Text,  Helvetica, Arial, serif, San-serif;
 	  font-size: 1.25rem;
-	  font-weight: light;
-	  letter-spacing: 0.1em;
+      letter-spacing: 0.1em;
 	  word-spacing: 0.2em;
 	  padding: 2px 8px 2px 8px;
 	  color: rgb(224, 226, 227 );
@@ -72,68 +52,21 @@
 	 }
 	 
 
-	 
-         .overlay    .arrowContainer1 ,
-	    .overlay    .arrowContainer2 {
-			
-		 display: inline-block;
-		 border: 1px solid yellow;
-		 width: 100px;
-		 height: 100px;
-		 
-	 } 
-	 
-	 
-	 
-	 .overlay .arrow1,
-	.overlay  .arrow2 {
-		
-		display: inline-block;
-	   width: 55%;
+	.overlay .arrow1,
+	
+	.overlay .arrow2 {
 	   
-	 }	  
-	 
-	.overlay .arrow1 {
+	    display: inline-block;
+		width: 40%;
+		height: 40%;
+		background-color: tomato;
+			
 		
-	  margin-top: 22px;
-	  margin-left: 22px;	 
-		 
-	 }
+	}
 	 
-	 .overlay .arrow2 {
-		 
-		 margin-top: 22px;
-		 margin-right: 22px;
-		 
-	 }
-	 
-	 
-	  .arrowContainer1,
-	.arrow1 {
-		
-		display : inline-block;
-		float: left;
-		margin-top: 290px;
-		margin-left: 60px;
-	 }
-	 
-	 .arrowContainer2,
-	 .arrow2 {
-		 
-		 display : inline-block;
-		 float: right;
-		 		margin-top: 290px;
-        margin-right: 60px;
-	 }
-	 
+	  								
 	
-	
-	
-
-
-
-
-     @media (min-width: 1024px ) {
+	   @media (min-width: 1024px ) {
 
 	  
 	  
@@ -199,7 +132,12 @@
 	 
 	}
 	
+	
+	
  }
+ 
+ 
+ 
 	.clearfix::before {
 	display: table;
 	content: "";
