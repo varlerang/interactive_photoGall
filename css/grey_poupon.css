@@ -19,16 +19,20 @@
 	.overlay .wrap {
 		position: absolute;
 	  display: block;
-	  width: 96%;
-	  border: 1px solid green;	
-		
+	  border: 1px solid silver;	
+      width: 76%;	 
+	  top: 60px;
 	}
 	
 	.overlay #photoViewer {
-		 position: absolute;
+		
 		 display: inline-block;
-		 max-width: 100%;
-		 max-height: 100%;
+		 border: 1px solid green;
+		 width: 90%;
+	 }
+	 
+	 .overlay .pic {
+		width: 960px; 
 	 }
 	
 	.overlay .captionText {
@@ -57,8 +61,8 @@
 	.overlay .arrow2 {
 	   
 	    display: inline-block;
-		width: 40%;
-		height: 40%;
+		width: 4%;
+		height: 4%;
 		background-color: tomato;
 			
 		
