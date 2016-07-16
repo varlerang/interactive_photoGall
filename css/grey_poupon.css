@@ -20,25 +20,34 @@
 		position: absolute;
 	  display: block;
 	  border: 1px solid silver;	
-      width: 76%;	 
-	  top: 60px;
+	  text-align: center;
+      width: 850px;	 
+	  padding: 14px;
+	  top: 190px;
+	  left: 295px;
 	}
 	
-	.overlay #photoViewer {
-		
-		 display: inline-block;
-		 border: 1px solid green;
-		 width: 90%;
+	.overlay .photoview {
+		display: block;
+		 border: 1px solid pink;
+		 width: 820px;
+		 padding: 8px;
+		 
+		 
 	 }
 	 
 	 .overlay .pic {
-		width: 960px; 
+		width: 660px; 
+				 
+
 	 }
 	
 	.overlay .captionText {
 		
 	   display : block;
-	   border: 1px solid teal;	
+	   border: 1px solid blue;	
+	   width: 600px;
+	   margin: 0 auto;
 	   
 	}
 	
@@ -61,12 +70,26 @@
 	.overlay .arrow2 {
 	   
 	    display: inline-block;
-		width: 4%;
-		height: 4%;
+		width: 8%;
+		height: 8%;
 		background-color: tomato;
 			
 		
 	}
+	
+	.overlay .arrow1 {
+	
+	  float: left;
+		
+	}
+	
+	 .overlay .arrow2  {
+		 
+		 float: right;
+		 
+		
+		
+	 }
 	 
 	  								
 	

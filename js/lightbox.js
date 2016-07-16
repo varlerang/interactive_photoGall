@@ -4,7 +4,7 @@
        
 			  var $wrapper = $("<div class='wrap'></div>");
 			  
-			   var $photoViewer = $("<div id='photoview'></div>");
+			   var $photoViewer = $("<div class='photoview'></div>");
 			   
 			  var $image = $("<img class='pic'/>");
 
@@ -36,9 +36,11 @@
 	  
 	   $photoViewer.append( $image );
 	   
+	   $photoViewer.append($arrow1).append( $arrow2 );
+	   
 	   $textContainer.append( $para );
 	  
-	  $wrapper.append( $photoViewer ).append( $arrow1 ).append( $arrow2 ).append( $textContainer );
+	  $wrapper.append( $photoViewer ).append( $textContainer );
 	  
 	  $overlay.append( $wrapper );
 	   
