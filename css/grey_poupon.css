@@ -21,10 +21,11 @@
 	  display: block;
 	  border: 1px solid silver;	
 	  text-align: center;
-      width: 850px;	 
+      width: 1100px;	 
+	  height: 660px;
 	  padding: 14px;
-	  top: 190px;
-	  left: 295px;
+	  top: 154px;
+	  left: 154px;
 	}
 	
 	.overlay .photoview {
