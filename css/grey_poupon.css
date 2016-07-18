@@ -32,15 +32,17 @@
 	.overlay .photoview {
 		display: block;
 		 border: 1px solid pink;
-		 width: 1040px;
-		 height: 490px;
+		 width: 1200px;
+		 height: 690px;
 		 padding: 8px;
-		 
+		 margin-left: 28px;
+		 margin-top: 36px;
 		 
 	 }
 	 
 	 .overlay .pic {
-		width: 660px; 
+		 margin-top: 26px;
+		width: 1000px; 
 				 
 
 	 }
@@ -73,8 +75,8 @@
 	.overlay .arrow2 {
 	   
 	    display: inline-block;
-		width: 8%;
-		height: 8%;
+		width: 60px;
+		height: 60px;
 		background-color: tomato;
 			
 		
