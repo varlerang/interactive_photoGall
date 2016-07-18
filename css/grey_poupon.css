@@ -20,9 +20,8 @@
 		position: relative;
 	  display: block;
 	  border: 1px solid silver;	
-	  text-align: center;
       width: 1290px;	 
-	  height: 860px;
+	  height: 890px;
 	  padding: 14px;
 	  margin-left: 100px;
 	  margin-top: 112px;
@@ -42,6 +41,7 @@
 	 
 	 .overlay .pic {
 		 margin-top: 26px;
+		 margin-left: 34px;
 		width: 1000px; 
 				 
 
@@ -51,10 +51,10 @@
 		
 	   display : block;
 	   border: 1px solid blue;	
-	   width: 600px;
+	   width: 620px;
 	   margin: 0 auto;
-	   margin-top: 10px;
-	   
+	   margin-top: 12px;
+	   padding: 6px 4px 6px 4px;
 	}
 	
 	 .overlay  p {
@@ -62,11 +62,13 @@
 	  border: 1px solid tomato;
 	  color: #fff;
 	  font-family : Fanwood Text,  Helvetica, Arial, serif, San-serif;
+	  width: 600px;
 	  font-size: 1.25rem;
       letter-spacing: 0.1em;
+	  margin: 0 auto;
 	  word-spacing: 0.2em;
-	  padding: 2px 8px 2px 8px;
 	  color: rgb(224, 226, 227 );
+	  
 	  
 	 }
 	 
