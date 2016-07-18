@@ -53,6 +53,7 @@
 	   border: 1px solid blue;	
 	   width: 600px;
 	   margin: 0 auto;
+	   margin-top: 10px;
 	   
 	}
 	
@@ -77,8 +78,9 @@
 	    display: inline-block;
 		width: 60px;
 		height: 60px;
-		background-color: tomato;
-			
+		margin-top: 310px;
+		color: rgb(224, 226, 227 );
+	    opacity: 0.8;
 		
 	}
 	
