@@ -89,17 +89,18 @@
 				   $main.click( function(e) {
 					   
 					   e.preventDefault();
-					   
-                          var imageRemove = $(this).attr("href");
+  
+						var removeLoc = $(this).attr("href");
 						  
-						  $image.attr("src", imageRemove);
+						  removeLoc.attr("src", removeLoc );
 						  
-						  var captionRemove = $(this).children("img").attr("alt");
+						  $overlay.remove();
 						  
-						  $para.text( captionRemove);
-						  
-						  $overlay.hide();
-						  
+						   var removeCaptionTex = $(this).children("img").attr("alt");
+						   
+						   $para.text( removeCaptionTex );
+						   
+						 
 					 });
 				     
 					  
