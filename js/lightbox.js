@@ -65,43 +65,29 @@
 				 e.preventDefault();
 				 
 				 
-					 
-					 var imageLoc = $(this).attr("href");
+				 var imageLoc = $(this).attr("href");
 					   
-					 $image.attr("src", imageLoc);
+			     $image.attr("src", imageLoc);
 					 
-					 
-					   $overlay.show();
+				 $overlay.show();
 
 					 
 					 var captionTex = $(this).children("img").attr("alt");
 				   
 					 $para.text( captionTex );
 					 
-					 
-
-					 
-					 
-			  });
+			 });
 			   
 		
-	            
-				   $main.click( function(e) {
-					   
-					   e.preventDefault();
-  
-						var removeLoc = $(this).attr("href");
-						  
-						  removeLoc.attr("src", removeLoc );
-						  
-						  $overlay.remove();
-						  
-						   var removeCaptionTex = $(this).children("img").attr("alt");
-						   
-						   $para.text( removeCaptionTex );
-						   
+	      $overlay.click( function(e) {
+			  
+			  e.preventDefault();
+			  
+			  $overlay.hide();
+			  
+		  });
+				 
 						 
-					 });
 				     
 					  
 	 	
