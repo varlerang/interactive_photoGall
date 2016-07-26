@@ -78,6 +78,7 @@
 					 
 			 });
 			   
+		/********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
 		
 	      $overlay.click( function(e) {
 			  
@@ -88,7 +89,15 @@
 		  });
 				 
 						 
-				     
+		/******************************************************************************/
+		
+		
+		
+		$arrow1.click( function(e) {
+			
+			var previousImg = $image.attr(
+			
+		});
 					  
 	 	
 		    
