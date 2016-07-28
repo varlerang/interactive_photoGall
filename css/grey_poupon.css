@@ -84,6 +84,19 @@
 		
 	}
 	
+	
+	.overlay .arrow1:hover {
+		
+		color: white;
+		opacity: 1.0;
+	}
+	
+	.overlay .arrow2:hover {
+		
+		color: white;
+		opacity: 1.0;
+	}
+	
 	.overlay .arrow1 {
 	
 	  float: left;

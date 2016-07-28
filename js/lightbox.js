@@ -95,7 +95,11 @@
 		
 		$arrow1.click( function(e) {
 			
-			var previousImg = $image.attr(
+			var previousImg = $("pic-nav").children("img").attr("alt");
+			
+			
+			
+			
 			
 		});
 					  
