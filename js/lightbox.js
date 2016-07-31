@@ -26,7 +26,11 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-			 
+			  var $nextImage;
+			  
+			  var $previousImage;
+			  
+			  var cache = {};
 	 
 	
 	  
@@ -66,6 +70,8 @@
 				 
 				 
 				 var imageLoc = $(this).attr("href");
+				 
+				 
 					   
 			     $image.attr("src", imageLoc);
 					 
@@ -95,13 +101,28 @@
 		
 		$arrow1.click( function(e) {
 			
-			var previousImg = $("pic-nav").children("img").attr("alt");
+			e.preventDefault();
+			 
+			  
+			
+			$main.each( function() {
+			
+			 $previousImage = $image.attr("href", src);
+			 
+			 $previousImage.removeClass( ".active" );
+			 
+			 $nextImage = $image.
+			
+			
+			 });
 			
 			
 			
+			 
 			
 			
-		});
+			
+			});
 					  
 	 	
 		    

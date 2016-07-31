@@ -111,6 +111,14 @@
 		
 	 }
 	 
+	 .active {
+		 visibility: visible;
+	 }
+	 
+	 .nonactive {
+		
+		visibility: hidden; 
+	 }
 	  								
 	
 	   @media (min-width: 1024px ) {
