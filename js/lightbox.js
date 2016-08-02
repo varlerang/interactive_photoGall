@@ -120,30 +120,25 @@
            
 				
 							
-		var $nxtImg = $current.next();
+		    var $nxtImg = $current.next();
+			
 		
-		 var $nextSrc = $nxtImg.children("img").attr("src");
+		    var $nextSrc = $nxtImg.children("img").attr("src");
 		 
 		   
 			
-		 var $nextLocation = $main.attr("href", $nextSrc );
 		 
 			
-		   
+		     $image.attr("src" , $nextSrc );
 			  
-			var $nextImg =  $(".pic-nav li ").children("img").attr("src", $nextLocation );
-
-				$image.attr("src", $nextImg );
 				
 
-             var $nextCapTex =  $(".pic-nav li").children("img").attr("alt");
+             var $nextCapTex =  $nxtImg.children("img").attr("alt");
   
 			
-			
-			
-			  var $nextText = $para.text( $nextCapTex );
+			$para.text( $nextCapTex );
 			    
-				 $image.attr("alt", $nextText );
+				 $nxtImg.show();
 			
 			$current = $nxtImg;
 			   
