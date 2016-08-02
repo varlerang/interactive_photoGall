@@ -2,6 +2,9 @@
 
   // appending div to the body //
        
+	   $(function() {
+		   
+	   
 			  var $wrapper = $("<div class='wrap'></div>");
 			  
 			   var $photoViewer = $("<div class='photoview'></div>");
@@ -126,13 +129,21 @@
 		 var $nextLocation = $main.attr("href", $nextSrc );
 		 
 			
-		   $(".pic-nav li ").children("img").attr("src", $nextLocation  );
 		   
+			  
+			var $nextImg =  $(".pic-nav li ").children("img").attr("src", $nextLocation );
+
+				$image.attr("src", $nextImg );
+				
+
+             var $nextCapTex =  $(".pic-nav li").children("img").attr("alt");
+  
 			
-			var $nextCapTex = $nxtImg.children("img").attr("alt");
 			
 			
-			$para.text( $nextCapTex );
+			  var $nextText = $para.text( $nextCapTex );
+			    
+				 $image.attr("alt", $nextText );
 			
 			$current = $nxtImg;
 			   
@@ -142,7 +153,7 @@
 					  
 	 	
 		    
-	
+});
 
 	  
 	 
