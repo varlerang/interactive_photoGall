@@ -98,27 +98,23 @@
 	}
 	
 	.overlay .arrow1 {
-	
+	 cursor: pointer;
 	  float: left;
 		
 	}
 	
 	 .overlay .arrow2  {
 		 
+		 
+		 cursor: pointer;
+
 		 float: right;
 		 
 		
 		
 	 }
 	 
-	 .active {
-		 visibility: visible;
-	 }
-	 
-	 .nonactive {
-		
-		visibility: hidden; 
-	 }
+	
 	  								
 	
 	   @media (min-width: 1024px ) {

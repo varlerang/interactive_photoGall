@@ -26,12 +26,8 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-			  var $nextImage;
 			  
-			  var $previousImage;
-			  
-			  var cache = {};
-	 
+	         var $current;
 	
 	  
 	  
@@ -56,6 +52,13 @@
 	  $overlay.hide();
 	  
 	  
+	  
+	  
+	  
+	  /***************************************************************/
+	  
+	  
+	  
 	 
 	 // iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			//
 	 
@@ -68,10 +71,11 @@
 					
 				 e.preventDefault();
 				 
+				    
 				 
 				 var imageLoc = $(this).attr("href");
 				 
-				 
+				 $current = $(this).parent();
 					   
 			     $image.attr("src", imageLoc);
 					 
@@ -83,6 +87,13 @@
 					 $para.text( captionTex );
 					 
 			 });
+			   
+			   
+			   
+			   
+			   
+			   
+			   
 			   
 		/********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
 		
@@ -103,26 +114,31 @@
 			
 			e.preventDefault();
 			 
-			  
+           
+				
+							
+		var $nxtImg = $current.next();
+		
+		 var $nextSrc = $nxtImg.children("img").attr("src");
+		 
+		   
 			
-			$main.each( function() {
+		 var $nextLocation = $main.attr("href", $nextSrc );
+		 
 			
-			 $previousImage = $image.attr("href", src);
-			 
-			 $previousImage.removeClass( ".active" );
-			 
-			 $nextImage = $image.
+		   $(".pic-nav li ").children("img").attr("src", $nextLocation  );
+		   
 			
-			
-			 });
+			var $nextCapTex = $nxtImg.children("img").attr("alt");
 			
 			
+			$para.text( $nextCapTex );
 			
-			 
+			$current = $nxtImg;
+			   
 			
 			
-			
-			});
+		});
 					  
 	 	
 		    
