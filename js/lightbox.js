@@ -130,26 +130,30 @@
 		
 		function getNxtImage() {
 			
-			  var $nxtImg = $current.next();
 			
-           var $nxtImageSrc = $nxtImg.children("img").attr("src");
+			
+			  var $nxtImg = $current.children("a").next();
+			  
+			  
+			
+           var $nxtImageSrc = $nxtImg.attr("href");
 		   
 		    			
-			
+			  var $nxtImageLoc = $image.attr("src", $nxtImageSrc );
 		
-		    $image.attr("src", $nxtImageSrc );
-		 
-		    
+		 $image.replace( $nxt);
+		  
+		
+		      
+		   $overlay.show();
+		   
 		   
 		   var $nextCapTex =  $nxtImg.children("img").attr("alt");
   
 			
 			$para.text( $nextCapTex );
 			
-			    
-				$image.show();
-			  
-			
+			  			
 		
 		}
 		
@@ -198,15 +202,10 @@
 			
 			e.preventDefault();
 			 
-           	
 			
 			 getNxtImage();
 			
 				
-							
-		  
-			   
-			
 		});
 					  
 	 	/************************************************************************************************************** */
