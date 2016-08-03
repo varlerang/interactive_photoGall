@@ -117,7 +117,78 @@
 		
 		
 		
-		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW FuNcTiOn $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+		
+		function getNxtImage() {
+			
+			  var $nxtImg = $current.next();
+			
+           var $nxtImageSrc = $nxtImg.children("img").attr("src");
+		   
+		    			
+			
+		
+		    $image.attr("src", $nxtImageSrc );
+		 
+		    
+		   
+		   var $nextCapTex =  $nxtImg.children("img").attr("alt");
+  
+			
+			$para.text( $nextCapTex );
+			
+			    
+				$image.show();
+			  
+			
+		
+		}
+		
+		
+		/*************************************************************************************************************/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK RiGhT aRroW fUnCtIoN &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+		
+		
+		
+		function getPrevImage() {
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		/* ********************************************************************************************************** */
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -127,39 +198,20 @@
 			
 			e.preventDefault();
 			 
-           
+           	
+			
+			 getNxtImage();
+			
 				
 							
-		    var $nxtImg = $main.next();
-			
-			$current = $main.children("img").attr("src");
-		
-		    var $nextSrc = $nxtImg.attr("src", $current);
-		 
-		    
-		   
-		 
-			
-		    $main.attr("src" , $nextSrc );
 		  
-			  
-				
-
-             var $nextCapTex =  $nxtImg.children("img").attr("alt");
-  
-			
-			$para.text( $nextCapTex );
-			
-			    
-				
-			  
-			$current = $nxtImg;
 			   
 			
 		});
 					  
-	 	
-		 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */   
+	 	/************************************************************************************************************** */
+		
+		
 
 	  
 	 
