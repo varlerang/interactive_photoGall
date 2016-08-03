@@ -2,7 +2,6 @@
 
   // appending div to the body //
        
-	   $(function() {
 		   
 	   
 			  var $wrapper = $("<div class='wrap'></div>");
@@ -62,8 +61,10 @@
 	  
 	  
 	  
+	  
+	  
 	 
-	 // iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			//
+	 /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			*/
 	 
 	 
 				
@@ -91,7 +92,8 @@
 					 
 			 });
 			   
-			   
+		
+		/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */	   
 			   
 			   
 			   
@@ -113,23 +115,33 @@
 		
 		
 		
+		
+		
+		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+		
+		
+		
 		$arrow1.click( function(e) {
+			
+			
 			
 			e.preventDefault();
 			 
            
 				
 							
-		    var $nxtImg = $current.next();
+		    var $nxtImg = $main.next();
 			
+			$current = $main.children("img").attr("src");
 		
-		    var $nextSrc = $nxtImg.children("img").attr("src");
+		    var $nextSrc = $nxtImg.attr("src", $current);
 		 
+		    
 		   
-			
 		 
 			
-		     $image.attr("src" , $nextSrc );
+		    $main.attr("src" , $nextSrc );
+		  
 			  
 				
 
@@ -137,18 +149,17 @@
   
 			
 			$para.text( $nextCapTex );
-			    
-				 $nxtImg.show();
 			
+			    
+				
+			  
 			$current = $nxtImg;
 			   
-			
 			
 		});
 					  
 	 	
-		    
-});
+		 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */   
 
 	  
 	 
