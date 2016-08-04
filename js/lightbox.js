@@ -28,10 +28,10 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-			   var $previous;
 	         var $current;
 	
-	  
+	          var $nextImageLocation;
+			  
 	  
 	  
 	  //**************************************aPpEnDiNg ***********************************//
@@ -133,27 +133,29 @@
 			
 			
 			 
-			  var $nxtImg = $current.children("img").next();
+			  var $nxtImg = $current.next("li").children("img").attr("alt");
 			  
+			     $image.attr("src", $nxtImg ); 				
 			  
 			
-           		var $nxtImgLoc = $nxtImg.attr( "href" );
+			
+			 
+           		$image.show();
 		   
 		    			
-
 				 
 		
-				 $image.attr("src", $nxtImgLoc );
 				 
 				 
 		    	 
 		  
 		      
 		   
-		   var $nextCapTex =  $nxtImg.children("img").attr("alt");
+		   var $nextCapTex =  $current.next().children("img").attr("alt");
   
 			
 			$para.text( $nextCapTex );
+			
 			
 		
 		}
@@ -190,7 +192,7 @@
 		
 		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK RiGhT aRroW fUnCtIoN &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 		
-		
+		/*
 		
 		function getPrevImage() {
 			
@@ -209,12 +211,13 @@
 		  $para.text( $preCapText ); 	
 			
 			
-			$overlay.show();
+		
 			
 			
 			
 		}
 		
+		*/
 		
 		/* ********************************************************************************************************** */
 		
