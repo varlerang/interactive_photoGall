@@ -28,7 +28,7 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-			  
+			   var $previous;
 	         var $current;
 	
 	  
@@ -80,6 +80,7 @@
 				 var imageLoc = $(this).attr("href");
 				 
 				 $current = $(this).parent();
+				 
 					   
 			     $image.attr("src", imageLoc);
 					 
@@ -131,36 +132,54 @@
 		function getNxtImage() {
 			
 			
-			
-			  var $nxtImg = $current.children("a").next();
+			 
+			  var $nxtImg = $current.children("img").next();
 			  
 			  
 			
-           var $nxtImageSrc = $nxtImg.attr("href");
+           		var $nxtImgLoc = $nxtImg.attr( "href" );
 		   
 		    			
-			  var $nxtImageLoc = $image.attr("src", $nxtImageSrc );
+
+				 
 		
-		 $image.replace( $nxt);
+				 $image.attr("src", $nxtImgLoc );
+				 
+				 
+		    	 
 		  
-		
 		      
-		   $overlay.show();
-		   
 		   
 		   var $nextCapTex =  $nxtImg.children("img").attr("alt");
   
 			
 			$para.text( $nextCapTex );
 			
-			  			
 		
 		}
 		
 		
 		/*************************************************************************************************************/
 		
+			
 		
+		
+		$arrow1.click( function(e) {
+			
+			
+			
+			e.preventDefault();
+			 
+			
+			 getNxtImage();
+			 
+				
+		});
+					  
+	 	/************************************************************************************************************** */
+		
+		
+
 		
 		
 		
@@ -175,9 +194,22 @@
 		
 		function getPrevImage() {
 			
+		var	$preImg = $previous.children("img").prev();
+		
+		 var $preImgLoc = $previous.attr("href");
+		 
+		
+		
+		 $image.attr("src", $preImgLoc );
+		 
+		 
+		 
+		  var $preCapText = $previous.children("img").attr("alt");
+		  
+		  $para.text( $preCapText ); 	
 			
 			
-			
+			$overlay.show();
 			
 			
 			
@@ -187,30 +219,19 @@
 		/* ********************************************************************************************************** */
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		$arrow1.click( function(e) {
-			
-			
+		$arrow2.click( function(e) {
 			
 			e.preventDefault();
-			 
 			
-			 getNxtImage();
+			getPrevImage();
 			
-				
+			
 		});
-					  
-	 	/************************************************************************************************************** */
 		
 		
-
+		
+		
+		
+	
 	  
 	 
