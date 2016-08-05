@@ -30,7 +30,6 @@
 			  
 	         var $current;
 	
-	          var $nextImageLocation;
 			  
 	  
 	  
