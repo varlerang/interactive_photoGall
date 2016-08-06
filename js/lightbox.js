@@ -28,7 +28,6 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-	         var $current;
 	
 			  
 	  
@@ -78,8 +77,8 @@
 				 
 				 var imageLoc = $(this).attr("href");
 				 
-				 $current = $(this).parent();
 				 
+					 $(this).parent("li").index();
 					   
 			     $image.attr("src", imageLoc);
 					 
@@ -131,16 +130,16 @@
 		function getNxtImage() {
 			
 			
-			 
-			  var $nxtImg = $current.children().add( $current.next()).add( $current.attr("href"));
+			   
+			   
+			  var $nxtImg = $main.children("a").next();
 			  
-			     var $nxtImgLocation = $image.attr("src", $nxtImg);
-			  
-			     $image.attr("src", $nxtImgLocation ); 				
+			      var $nxtImgLoc =  $image.attr("src", $nxtImg );
+				  
+				  
 			  
 			
-			
-			 
+   					$overlay.show();			      
            	
 		    			
 				 
@@ -151,13 +150,12 @@
 		  
 		      
 		   
-		   var $nextCapTex =  $current.next().add( $current.children("img")).add( $current.attr("alt"));
+		   var $nextCapTex =  $main.next().add( $main.children("img")).add( $main.attr("alt"));
   
 			
 			$para.text( $nextCapTex );
 			
-			 $overlay.show();
-		
+		  $overlay.show();
 		}
 		
 		
@@ -172,8 +170,7 @@
 			
 			e.preventDefault();
 			 
-			
-			 getNxtImage();
+			$nxtImg
 			 
 				
 		});
