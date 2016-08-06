@@ -132,30 +132,31 @@
 			
 			
 			 
-			  var $nxtImg = $current.next("li").children("img").attr("alt");
+			  var $nxtImg = $current.children().add( $current.next()).add( $current.attr("href"));
 			  
-			     $image.attr("src", $nxtImg ); 				
+			     var $nxtImgLocation = $image.attr("src", $nxtImg);
+			  
+			     $image.attr("src", $nxtImgLocation ); 				
 			  
 			
 			
 			 
-           		$image.show();
-		   
+           	
 		    			
 				 
 		
-				 
+				  
 				 
 		    	 
 		  
 		      
 		   
-		   var $nextCapTex =  $current.next().children("img").attr("alt");
+		   var $nextCapTex =  $current.next().add( $current.children("img")).add( $current.attr("alt"));
   
 			
 			$para.text( $nextCapTex );
 			
-			
+			 $overlay.show();
 		
 		}
 		
