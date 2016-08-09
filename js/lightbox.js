@@ -132,48 +132,63 @@
 			
 			   
 			   
-			  var $nxtImg = $main.children("a").next();
+			  var $nxtImgLoc = $main.children("li").next();
 			  
-			      var $nxtImgLoc =  $image.attr("src", $nxtImg );
+			      $nxtImgLoc = $( ".pic-nav li > a").attr("href");
+				  
+			  
+			  var $nxtSrc = $main.children("img").next();
+			  
+			  	$nxtSrcLoc = $(" .pic-nav img").attr("src", $nxtSrc );
+				
+				   $image.attr("href", $nxtImgLoc );
+			  
+			       $image.attr("src", $nxtSrcLoc );
+			  
+			 
 				  
 				  
-			  
 			
-   					$overlay.show();			      
            	
-		    			
-				 
-		
-				  
-				 
-		    	 
-		  
-		      
-		   
-		   var $nextCapTex =  $main.next().add( $main.children("img")).add( $main.attr("alt"));
-  
+		     var $nextCapTex = $main.children("img").attr("alt");
+             
+			     
 			
 			$para.text( $nextCapTex );
 			
+			$image.attr("alt", $para);
+			
 		  $overlay.show();
+		  
+		  
+		  
 		}
 		
 		
-		/*************************************************************************************************************/
+		/***************************
+		
+		**********************************************************************************/
 		
 			
+			$arrow1.click( function(e) {
+
+  
+  					e.preventDefault();
+     				e.stopPropagation();
+  
+      
+	  	console.log(getNxtImage());
+
+
+
+
+
+
+
+                                      });
 		
 		
-		$arrow1.click( function(e) {
-			
-			
-			
-			e.preventDefault();
-			 
-			$nxtImg
-			 
-				
-		});
+	
 					  
 	 	/************************************************************************************************************** */
 		
@@ -187,47 +202,7 @@
 		
 		
 		
-		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK RiGhT aRroW fUnCtIoN &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-		
-		/*
-		
-		function getPrevImage() {
-			
-		var	$preImg = $previous.children("img").prev();
-		
-		 var $preImgLoc = $previous.attr("href");
-		 
-		
-		
-		 $image.attr("src", $preImgLoc );
-		 
-		 
-		 
-		  var $preCapText = $previous.children("img").attr("alt");
-		  
-		  $para.text( $preCapText ); 	
-			
-			
-		
-			
-			
-			
-		}
-		
-		*/
-		
-		/* ********************************************************************************************************** */
-		
-		
-		$arrow2.click( function(e) {
-			
-			e.preventDefault();
-			
-			getPrevImage();
-			
-			
-		});
-		
+	
 		
 		
 		
