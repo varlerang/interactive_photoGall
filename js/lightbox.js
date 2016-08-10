@@ -132,25 +132,26 @@
 			
 			   
 			   
-			  var $nxtImgLoc = $main.children("li").next();
+			  var $nxtImgLoc = $(".pic-nav a").children().next();
 			  
-			      $nxtImgLoc = $( ".pic-nav li > a").attr("href");
+			     $image.attr("href", $nxtImgLoc );
 				  
 			  
-			  var $nxtSrc = $main.children("img").next();
+			  var $nxtSrcLoc = $(" .pic-nav img").children().next();
 			  
-			  	$nxtSrcLoc = $(" .pic-nav img").attr("src", $nxtSrc );
+			  	 $image.attr("src", $nxtSrcLoc );
+				 
+				 		
 				
-				   $image.attr("href", $nxtImgLoc );
 			  
-			       $image.attr("src", $nxtSrcLoc );
+			       
 			  
 			 
 				  
 				  
 			
            	
-		     var $nextCapTex = $main.children("img").attr("alt");
+		     var $nextCapTex = $nxtSrcLoc.attr("alt");
              
 			     
 			
