@@ -28,9 +28,9 @@
 			  
 			  var $main =  $(".pic-nav li a");
 			  
-	
+				var $nextImage = $(".pic-nav li ");
 			  
-	  
+	            var $current;
 	  
 	  //**************************************aPpEnDiNg ***********************************//
 	  
@@ -129,29 +129,30 @@
 		
 		function getNxtImage() {
 			
-			
-			   
-			   
-			  var $nxtImgLoc = $(".pic-nav a").children().next();
-			  
-			     $image.attr("href", $nxtImgLoc );
-				  
-			  
-			  var $nxtSrcLoc = $(" .pic-nav img").children().next();
-			  
-			  	 $image.attr("src", $nxtSrcLoc );
-				 
-				 		
-				
-			  
 			       
-			  
-			 
-				  
-				  
-			
-           	
-		     var $nextCapTex = $nxtSrcLoc.attr("alt");
+				   
+			    
+					 
+					 var $currentImgHref = $(".pic-nav li a").parent("li");
+					 
+					    $currentImgHref.attr("href");
+				 
+				    var $nxtLoc = $(".pic-nav li a").children("li").next();
+					
+					      $currentImgHref.attr("href", $nxtLoc );
+						  
+						  $image.attr("href", $currentImgHref );
+				   
+				    var $currentImgSrc = $(".pic-nav > img").parent();
+					
+					  $currentImgSrc.attr("src");
+					  
+					  var $nxtImgSrc = $(".pic-nav > img").children("img").next();
+				 
+				   	  $image.attr("src", $nxtImgSrc );
+					  
+					  
+		     var $nextCapTex = $nxtImgSrc.attr("alt");
              
 			     
 			
@@ -160,9 +161,9 @@
 			$image.attr("alt", $para);
 			
 		  $overlay.show();
-		  
-		  
-		  
+				 
+				  
+			  
 		}
 		
 		
@@ -177,10 +178,12 @@
   					e.preventDefault();
      				e.stopPropagation();
   
-      
-	  	console.log(getNxtImage());
+           
+		    getNxtImage();
+	  	
 
 
+							  console.log( getNxtImage());
 
 
 
