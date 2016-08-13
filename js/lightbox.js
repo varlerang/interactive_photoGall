@@ -31,23 +31,7 @@
 				var $nextImage = $(".pic-nav li ");
 			  
 	  
-	  			var $cache = ( [ 
-				  
-				  "img/thumb-img/01.jpg",
-				   "img/thumb-img/01.jpg" ,
-					"img/thumb-img/02.jpg", 
-					"img/thumb-img/03.jpg",
-					 "img/thumb-img/04.jpg",
-					  "img/thumb-img/05.jpg",
-					   "img/thumb-img/06.jpg", 
-					   "img/thumb-img/07.jpg",
-						"img/thumb-img/08.jpg",
-						 "img/thumb-img/09.jpg",
-						  "img/thumb-img/10.jpg",
-						   "img/thumb-img/11.jpg",
-							"img/thumb-img/12.jpg" 
-							
-							                    ] );
+	  		
 				
 	  //**************************************aPpEnDiNg ***********************************//
 	  
@@ -146,18 +130,30 @@
 		
 		function getNxtImage() {
 			
-					 
-				  $c(".pic-nav > img").each( function( $cache ) {
-					if ( var = i, i < 12; i++ ) {
-						
-						
-					}
+					var $current = $main.parent("li").index(); 
+					
+					  $current.attr("href");
+					  
+				  $image.attr("href", $current );
+				  
+				  var $currentSrc = $(" .pic-nav > img ").attr("src");
+				  
+				  $image.attr("src", $currentSrc );
+				  
+				  $image.hide();
+				  
+				  	  
+				 
+				  
+				  var capText = $(" .pic-nav img").attr("alt");
+				
+					$para.attr("alt", capText);	
+					
 					  
 					  
 					  
 					  
 					  
-				  });
 				  
 					
 				
