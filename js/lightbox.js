@@ -128,26 +128,32 @@
 		
 		function getNxtImage() {
 			
-			       
-				var cache = ( [ "", "" , "", "", "", "", "", "", "", "", "", "", "" ] );
-				var $nxtLoc = 
-				
-				
-					
-				  $nxtLoc.attr("href");	
+					 
+				  var cache = ( [ 
 				  
-				  $image.attr("src", $nxtLoc );
+				  "img/thumb-img/01.jpg",
+				   "img/thumb-img/01.jpg" ,
+					"img/thumb-img/02.jpg", 
+					"img/thumb-img/03.jpg",
+					 "img/thumb-img/04.jpg",
+					  "img/thumb-img/05.jpg",
+					   "img/thumb-img/06.jpg", 
+					   "img/thumb-img/07.jpg",
+						"img/thumb-img/08.jpg",
+						 "img/thumb-img/09.jpg",
+						  "img/thumb-img/10.jpg",
+						   "img/thumb-img/11.jpg",
+							"img/thumb-img/12.jpg" 
+							
+							                    ] );
+				
 				  
 				  
 					
 				
 					
 				 
-			     var $nxtCapText = $main.children("img").attr("alt");
-			
-			$para.text( $nxtCapText );
-			
-			$overlay.show();
+			 
 			
 		 
 				 
