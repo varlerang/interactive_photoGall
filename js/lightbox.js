@@ -30,7 +30,6 @@
 			  
 				var $nextImage = $(".pic-nav li ");
 			  
-	            var $current;
 	  
 	  //**************************************aPpEnDiNg ***********************************//
 	  
@@ -130,37 +129,27 @@
 		function getNxtImage() {
 			
 			       
-				   
-			    
-					 
-					 var $currentImgHref = $(".pic-nav li a").parent("li");
-					 
-					    $currentImgHref.attr("href");
-				 
-				    var $nxtLoc = $(".pic-nav li a").children("li").next();
+				var cache = ( [ "", "" , "", "", "", "", "", "", "", "", "", "", "" ] );
+				var $nxtLoc = 
+				
+				
 					
-					      $currentImgHref.attr("href", $nxtLoc );
-						  
-						  $image.attr("href", $currentImgHref );
-				   
-				    var $currentImgSrc = $(".pic-nav > img").parent();
+				  $nxtLoc.attr("href");	
+				  
+				  $image.attr("src", $nxtLoc );
+				  
+				  
 					
-					  $currentImgSrc.attr("src");
-					  
-					  var $nxtImgSrc = $(".pic-nav > img").children("img").next();
+				
+					
 				 
-				   	  $image.attr("src", $nxtImgSrc );
-					  
-					  
-		     var $nextCapTex = $nxtImgSrc.attr("alt");
-             
-			     
+			     var $nxtCapText = $main.children("img").attr("alt");
 			
-			$para.text( $nextCapTex );
+			$para.text( $nxtCapText );
 			
-			$image.attr("alt", $para);
+			$overlay.show();
 			
-		  $overlay.show();
+		 
 				 
 				  
 			  
@@ -179,6 +168,7 @@
      				e.stopPropagation();
   
            
+		   
 		    getNxtImage();
 	  	
 
