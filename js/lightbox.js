@@ -5,72 +5,59 @@
 		   
 	   
 			  var $wrapper = $("<div class='wrap'></div>");
-			  
-			   var $photoViewer = $("<div class='photoview'></div>");
-			   
+			  var $photoViewer = $("<div class='photoview'></div>");
 			  var $image = $("<img class='pic'/>");
-
-			  
-			  var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>");
-			  
-			  
+              var $arrow1 = $("<img class='arrow1' src='icon/arrows.svg'/>");
 			  var $arrow2 = $("<img class='arrow2' src='icon/arrows-1.svg'/>");
-			  
-			  
-			   var $textContainer = $("<div class='captionText'></div>");
-			   
-		  
+			  var $textContainer = $("<div class='captionText'></div>");
 			  var $para = $("<p></p>");
-			  
-			  
 			  var $overlay = $("<div class='overlay'></div>");
-			 
-			  
 			  var $main =  $(".pic-nav li a");
+			  var $nextImage = $(".pic-nav li ");
 			  
-				var $nextImage = $(".pic-nav li ");
+	          var $imageCache = [
+			   
+			   "img/thumb-img/01.jpg",
+			   "img/thumb-img/02.jpg",
+			   "img/thumb-img/03.jpg",
+			   "img/thumb-img/04.jpg",
+			   "img/thumb-img/05.jpg",
+			   "img/thumb-img/06.jpg",
+			   "img/thumb-img/07.jpg",
+			   "img/thumb-img/08.jpg",
+			   "img/thumb-img/09.jpg",
+			   "img/thumb-img/10.jpg",
+			   "img/thumb-img/11.jpg",
+			   "img/thumb-img/12.jpg"	
+			   
+			   	];
+			   
+			   
+			   
+			   
 			  
-	  
 	  		
 				
 	  //**************************************aPpEnDiNg ***********************************//
 	  
 	   $photoViewer.append( $image );
-	   
 	   $photoViewer.append($arrow1).append( $arrow2 );
-	   
 	   $textContainer.append( $para );
+	   $wrapper.append( $photoViewer ).append( $textContainer );
+	   $overlay.append( $wrapper );
+	   $("body").append( $overlay );
+	   $overlay.hide();
 	  
-	  $wrapper.append( $photoViewer ).append( $textContainer );
-	  
-	  $overlay.append( $wrapper );
-	   
-		$("body").append( $overlay );
-	  
-	  
-	 
-	 
-	  $overlay.hide();
+	   /***************************************************************/
 	  
 	  
-	  
-	  
-	  
-	  /***************************************************************/
-	  
-	  
-	  
-	  
-	  
-	 
-	 /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			*/
+	   /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			*/
 	 
 	 
 				
 				
 				
 				$main.click( function(e) {
-					
 					
 				 e.preventDefault();
 				 
@@ -130,55 +117,13 @@
 		
 		function getNxtImage() {
 			
-					var $current = $main.parent("li").attr("href"); 
 					
-					$current.attr("href", href );
-					
-					 var $currentImage = $image.attr("href", $current );
-					
-					var $nextLocHref = $main.children("li").attr("href");
-					
-					 var $nextLocImage = $nextLocHref.attr("href", href );
-					
-					$image.attr("href" , $nextLocHref );
-					
-					
-					
-					
-					
-					var $currentSrc = $(" .pic_nav li > img ").parent("img").attr("src");
-					
-					var $currentImgSrc =  $image.attr("src", $currentSrc );
-					
-					var $nextSrcLoc = $(" .pic_nav li > img ").children("img").attr("src");
-					
-					 var $nextImgSrc = $image.attr("src", $nextSrcLoc );
-					 
-					
-					 var $currentImgShow = $image.attr(  $currentImage , $currentSrc );
-					 
-					 var $nextImgShow = $image.attr( $nextLocImage, $nextImgSrc );
-					 
-					  $currentImgShow.hide();
-					  
-					  $nextImgShow.show();
-					  
 					  
 			
 					  
-				 var $currentCapText = $(" .pic-nav li > img").parent("img").attr("alt");
-				
-				 var $currentShownText = $para.text("alt", $currentCapText );
-				 
-				 	
-					var $nextCapText = $(" .pic-nav li > img").children("img").attr("alt");
-					
-		
-			  var $nextShownText = $para.text("alt", $nextCapText );
 			
-					$nextCapText.hide();
-					
-					 $nextShownText.show();
+					 
+					 
 					 
 					 
 		}
@@ -190,23 +135,18 @@
 			
 			$arrow1.click( function(e) {
 
-  
-  					e.preventDefault();
+                  e.preventDefault();
      				e.stopPropagation();
   
            
-		   
-		    getNxtImage();
+		       getNxtImage();
 	  	
 
 
 							  console.log( getNxtImage());
-
-
-
-
-
-                                      });
+							  
+							  
+							   });
 		
 		
 	
