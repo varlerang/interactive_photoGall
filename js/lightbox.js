@@ -132,27 +132,41 @@
 			
 					var $current = $main.parent("li").attr("href"); 
 					
+					$current.attr("href", href );
+					
+					 var $currentImage = $image.attr("href", $current );
+					
 					var $nextLocHref = $main.children("li").attr("href");
 					
-					$current.attr("href", href);
+					 var $nextLocImage = $nextLocHref.attr("href", href );
 					
-					$nextLocHref.attr("src", src );
+					$image.attr("href" , $nextLocHref );
+					
+					
+					
+					
 					
 					var $currentSrc = $(" .pic_nav > img ").parent("img").attr("src");
 					
+					var $currentImgSrc =  $image.attr("src", $currentSrc );
+					
 					var $nextSrcLoc = $(" .pic_nav > img ").children("img").attr("src");
 					
+					 var $nextImgSrc = $image.attr("src", $nextSrcLoc );
+					 
 					
-					
+					 var $currentImgShow = $image.attr(  $currentImage , $currentSrc );
+					 
+					 var $nextImgShow = $image.attr( $nextLocImage, $nextImgSrc );
+					 
+					  $currentImgShow.hide();
+					  
+					  $nextImgShow.show();
+					  
+					  
 			
 					  
-				  $image.attr("href", $current );
-				  
-				  var $currentSrc = $( " .pic-nav > img " ).attr("src");
-				  
-				  $image.attr("src", $currentSrc );
-				  
-				  $image.hide();
+				
 				  
 				  	  
 				 
