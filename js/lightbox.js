@@ -130,13 +130,25 @@
 		
 		function getNxtImage() {
 			
-					var $current = $main.parent("li").index(); 
+					var $current = $main.parent("li").attr("href"); 
 					
-					  $current.attr("href");
+					var $nextLocHref = $main.children("li").attr("href");
+					
+					$current.attr("href", href);
+					
+					$nextLocHref.attr("src", src );
+					
+					var $currentSrc = $(" .pic_nav > img ").parent("img").attr("src");
+					
+					var $nextSrcLoc = $(" .pic_nav > img ").children("img").attr("src");
+					
+					
+					
+			
 					  
 				  $image.attr("href", $current );
 				  
-				  var $currentSrc = $(" .pic-nav > img ").attr("src");
+				  var $currentSrc = $( " .pic-nav > img " ).attr("src");
 				  
 				  $image.attr("src", $currentSrc );
 				  
@@ -147,7 +159,7 @@
 				  
 				  var capText = $(" .pic-nav img").attr("alt");
 				
-					$para.attr("alt", capText);	
+					$para.text("alt", capText);	
 					
 					  
 					  
