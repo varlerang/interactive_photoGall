@@ -146,11 +146,11 @@
 					
 					
 					
-					var $currentSrc = $(" .pic_nav > img ").parent("img").attr("src");
+					var $currentSrc = $(" .pic_nav li > img ").parent("img").attr("src");
 					
 					var $currentImgSrc =  $image.attr("src", $currentSrc );
 					
-					var $nextSrcLoc = $(" .pic_nav > img ").children("img").attr("src");
+					var $nextSrcLoc = $(" .pic_nav li > img ").children("img").attr("src");
 					
 					 var $nextImgSrc = $image.attr("src", $nextSrcLoc );
 					 
@@ -166,33 +166,22 @@
 					  
 			
 					  
+				 var $currentCapText = $(" .pic-nav li > img").parent("img").attr("alt");
 				
-				  
-				  	  
+				 var $currentShownText = $para.text("alt", $currentCapText );
 				 
-				  
-				  var capText = $(" .pic-nav img").attr("alt");
-				
-					$para.text("alt", capText);	
+				 	
+					var $nextCapText = $(" .pic-nav li > img").children("img").attr("alt");
 					
-					  
-					  
-					  
-					  
-					  
-				  
-					
-				
-					
-				 
-			 
-			
-		 
-				 
-				  
-			  
-		}
 		
+			  var $nextShownText = $para.text("alt", $nextCapText );
+			
+					$nextCapText.hide();
+					
+					 $nextShownText.show();
+					 
+					 
+		}
 		
 		/***************************
 		
