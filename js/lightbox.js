@@ -51,15 +51,17 @@
 				
 				
 				
-				$main.click( function(e) {
+	$main.click( function(e) {
 					
-				 e.preventDefault();
+	 e.preventDefault();
 				 
 				    
 				 
-				 var imageLoc = $(this).attr("href");
+	var imageLoc = $(this).attr("href");
 				 
-				 
+     $(this).addClass(" selected ");
+					   
+					
 					 $(this).parent("li").index();
 					   
 			     $image.attr("src", imageLoc);
