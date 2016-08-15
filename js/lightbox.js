@@ -15,7 +15,7 @@
 			  var $main =  $(".pic-nav li a");
 			  var $nextImage = $(".pic-nav li ");
 			  
-	          var $imageCache = [
+	          var imageCache = [
 			   
 			   "img/thumb-img/01.jpg",
 			   "img/thumb-img/02.jpg",
@@ -31,17 +31,11 @@
 			   "img/thumb-img/12.jpg"	
 			   
 			   	];
-			   
-			   
-			   
-			   
-			  
-	  		
-				
-	  //**************************************aPpEnDiNg ***********************************//
+     //**************************************aPpEnDiNg ***********************************//
 	  
 	   $photoViewer.append( $image );
-	   $photoViewer.append($arrow1).append( $arrow2 );
+	   $photoViewer.append($arrow1);
+	   $photoViewer.append( $arrow2 );
 	   $textContainer.append( $para );
 	   $wrapper.append( $photoViewer ).append( $textContainer );
 	   $overlay.append( $wrapper );
@@ -82,12 +76,7 @@
 		
 		/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */	   
 			   
-			   
-			   
-			   
-			   
-			   
-		/********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
+			/********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
 		
 	      $overlay.click( function(e) {
 			  
@@ -100,36 +89,22 @@
 						 
 		/******************************************************************************/
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW FuNcTiOn $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 		
-		function getNxtImage() {
+		function getNxtImage( index ) {
 			
-					
-					  
-			
-					  
-			
-					 
-					 
-					 
-					 
+			      var imageList = imageCache.length;
+				  
+				  
+				 		 console.log( imageList );
+
+				  
+				 
+				
+				 
 		}
-		
 		/***************************
-		
+		 
 		**********************************************************************************/
 		
 			
@@ -139,11 +114,11 @@
      				e.stopPropagation();
   
            
-		       getNxtImage();
+		       getNxtImage(  );
 	  	
 
 
-							  console.log( getNxtImage());
+							  
 							  
 							  
 							   });
