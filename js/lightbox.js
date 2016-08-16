@@ -67,7 +67,7 @@
 					 
 				 $overlay.show();
 				 
-                 $(this).addClass(" selected ").css( "border", "2px solid tomato");
+                 $(this).addClass(" selected ");
 					   
 					 
 					 var captionTex = $(this).children("img").attr("alt");
@@ -96,22 +96,39 @@
 		
 		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW FuNcTiOn $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 		
-		function getNxtImage() {
+		function getNxtImage( $img ) {
 			
-			  var $currentImg =  $imageLoc.addClass(" selected");
+			
+			
+			   $currentImg = $(this).addClass(" selected");
+			   
+				  $currentImg.attr("alt");
 				  
-			 var $currentCaption = $captionText.addClass(" selected ");
-				  
-				var $imageList = imageCache.length;
+				 imageCache.length;
 				
 				// go through the imageCache and look for the matching src path of $currentImg and $currentCaption//
-			if ( $currentImg == $imageList["src"] ) {
 				
-				 
+				if ( imageCache.hasOwnProperty( "src" ) == $currentImg ) {
+					 
+					 $currentImg.removeClass( " selected ");
+					  
+					if (  imageCache[src] == $currentImg  >= 0 ) {
+					
+					
+					
+						if ( imageCache.inArray( $currentImg )  >= 0 ) {
+							
+							console.log( $currentImg );
+
+						}
+					
+					 
+					
+					}
+					 	
 				
-			}
-			
-			
+				}
+				
 		}
 		/***************************
 		 
