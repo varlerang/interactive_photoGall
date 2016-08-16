@@ -59,17 +59,20 @@
 				 
 	var imageLoc = $(this).attr("href");
 				 
-     $(this).addClass(" selected ");
-					   
+    
 					
 					 $(this).parent("li").index();
 					   
 			     $image.attr("src", imageLoc);
 					 
 				 $overlay.show();
-
+				 
+                 $(this).addClass(" selected ").css( "border", "2px solid tomato");
+					   
 					 
 					 var captionTex = $(this).children("img").attr("alt");
+					 
+					 $(this).addClass(" selected");
 				   
 					 $para.text( captionTex );
 					 
@@ -93,17 +96,22 @@
 		
 		/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW FuNcTiOn $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 		
-		function getNxtImage( index ) {
+		function getNxtImage() {
 			
-			      var imageList = imageCache.length;
+			  var $currentImg =  $imageLoc.addClass(" selected");
 				  
+			 var $currentCaption = $captionText.addClass(" selected ");
 				  
-				 		 console.log( imageList );
-
-				  
-				 
+				var $imageList = imageCache.length;
+				
+				// go through the imageCache and look for the matching src path of $currentImg and $currentCaption//
+			if ( $currentImg == $imageList["src"] ) {
 				
 				 
+				
+			}
+			
+			
 		}
 		/***************************
 		 
@@ -116,7 +124,7 @@
      				e.stopPropagation();
   
            
-		       getNxtImage(  );
+		       getNxtImage();
 	  	
 
 
