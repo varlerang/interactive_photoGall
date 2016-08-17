@@ -15,22 +15,7 @@
 			  var $main =  $(".pic-nav li a");
 			  var $nextImage = $(".pic-nav li ");
 			  
-	          var imageCache = [
-			   
-			   "img/thumb-img/01.jpg",
-			   "img/thumb-img/02.jpg",
-			   "img/thumb-img/03.jpg",
-			   "img/thumb-img/04.jpg",
-			   "img/thumb-img/05.jpg",
-			   "img/thumb-img/06.jpg",
-			   "img/thumb-img/07.jpg",
-			   "img/thumb-img/08.jpg",
-			   "img/thumb-img/09.jpg",
-			   "img/thumb-img/10.jpg",
-			   "img/thumb-img/11.jpg",
-			   "img/thumb-img/12.jpg"	
-			   
-			   	];
+	         
      //**************************************aPpEnDiNg ***********************************//
 	  
 	   $photoViewer.append( $image );
@@ -103,31 +88,11 @@
 			   $currentImg = $(this).addClass(" selected");
 			   
 				  $currentImg.attr("alt");
-				  
-				 imageCache.length;
-				
-				// go through the imageCache and look for the matching src path of $currentImg and $currentCaption//
-				
-				if ( imageCache.hasOwnProperty( "src" ) == $currentImg ) {
-					 
-					 $currentImg.removeClass( " selected ");
-					  
-					if (  imageCache[src] == $currentImg  >= 0 ) {
-					
-					
-					
-						if ( imageCache.inArray( $currentImg )  >= 0 ) {
+			
 							
 							console.log( $currentImg );
 
-						}
 					
-					 
-					
-					}
-					 	
-				
-				}
 				
 		}
 		/***************************
