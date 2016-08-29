@@ -94,32 +94,29 @@
 		
 		
 		
-		 var $currentLoc = $(".pic-nav li a").children().removeClass(" selected ");
+		 var $currentLoc = $(".pic-nav li a").parent().removeClass(" selected ");
 		 
-  			var $currentImg = $currentLoc.attr("href");
-			
-			     $image.attr("src", $currentLoc );
-			
-			      var $currentCapText = $(" .pic-nav li a ").siblings("img");
-				  
-				    $currentCapText.attr("alt");
-				 
-				$para.text( $currentCapText);
-				
-				
-            	
-		     var $nextLoc = $(" .pic-nav li a ").children().addClass( "selected" );
+  			 $currentLoc.attr("href");
 			 
-			 var $nextImg =	$nextLoc.attr("href");
-				
-				$image.attr( "src", $nextImg );
-				
-				var $nextCapText = $(" .pic-nav li a").siblings( "img" );
-				
-				$para.text( $nextCapText );
-				
-				$overlay.show();
-	  	 
+			 var $currentCapText = $(".pic-nav li").parent().siblings();
+			 
+			      $currentCapText.attr("alt");
+				  
+				  $para.text( $currentCapText );
+				  
+				  
+			     var $nextLoc = $(" .pic-nav li ").children().addClass.("selected");
+			
+			      $nextLoc.attr("href");
+				  
+				  $currentLoc.attr("href", $nextLoc );
+		 
+		 var $nextCapText = $(" .pic-nav li a ").children().siblings();
+			   	
+		      $nextCapText.attr("alt");
+			  
+			  $para.text( $nextCapText );
+			  
 	}
 					 
 		  $arrow1.click( function(e) {
