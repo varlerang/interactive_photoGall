@@ -13,7 +13,6 @@
 			var $para = $("<p></p>");
 			var $overlay = $("<div class='overlay'></div>");
 			var $main =  $(".pic-nav li a");
-			var $nextImage = $(".pic-nav li ");
 			
 		   
    //**************************************aPpEnDiNg ***********************************//
@@ -89,33 +88,24 @@
 	  **********************************************************************************/
 	  
 	function getNxtImg() {
-		
+		"use strict";
 		 
 		
 		
 		
-		 var $currentLoc = $(".pic-nav li a").parent().removeClass(" selected ");
+		 var $currentLoc = $(".pic-nav li a").children().removeClass(" selected ");
 		 
   			 $currentLoc.attr("href");
 			 
-			 var $currentCapText = $(".pic-nav li").parent().siblings();
+			 $image.attr("src" );
 			 
-			      $currentCapText.attr("alt");
+				  $currentLoc.siblings("img");
 				  
-				  $para.text( $currentCapText );
+				  $currentLoc.attr("alt");
 				  
-				  
-			     var $nextLoc = $(" .pic-nav li ").children().addClass.("selected");
-			
-			      $nextLoc.attr("href");
-				  
-				  $currentLoc.attr("href", $nextLoc );
-		 
-		 var $nextCapText = $(" .pic-nav li a ").children().siblings();
-			   	
-		      $nextCapText.attr("alt");
-			  
-			  $para.text( $nextCapText );
+				  $para.text( $currentLoc );
+				   
+			     
 			  
 	}
 					 
