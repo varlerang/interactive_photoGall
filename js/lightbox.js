@@ -93,18 +93,27 @@
 		
 		
 		
-		 var $currentLoc = $(".pic-nav li a").children().removeClass(" selected ");
-		 
-  			 $currentLoc.attr("href");
+		 var $currentLoc = $(".pic-nav li a").parent();
+		  $currentLoc.attr("href");
+		    $currentLoc.removeClass( "selected");
+		 var $currentText = $currentLoc.parent().siblings("img");
+		  $currentText.attr("alt");
+		   
+		   var $nextImg = $(".pic-nav li a").children().siblings().next();
+		      $nextImg.attr("href");
+			  $nextImg.addClass("selected");
+			  
+			  $currentLoc.attr("href", $nextImg );
+			  
+			  $image.attr("src", $currentLoc);
+			  
+			  var $nextText = $nextImg.children("img").attr("alt");
+			     $currentText.attr("alt", $nextText );
+  			
 			 
-			 $image.attr("src" );
+			$para.text( $currentText );
 			 
-				  $currentLoc.siblings("img");
-				  
-				  $currentLoc.attr("alt");
-				  
-				  $para.text( $currentLoc );
-				   
+				 
 			     
 			  
 	}
