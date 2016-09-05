@@ -91,31 +91,20 @@
 		"use strict";
 		 
 		
+		// I am getting the href and the alt from current image and hid it //
 		
 		
-		 var $currentLoc = $(".pic-nav li a").parent();
-		  $currentLoc.attr("href");
-		    $currentLoc.removeClass( "selected");
-		 var $currentText = $currentLoc.parent().siblings("img");
-		  $currentText.attr("alt");
-		   
-		   var $nextImg = $(".pic-nav li a").children().siblings().next();
-		      $nextImg.attr("href");
-			  $nextImg.addClass("selected");
-			  
-			  $currentLoc.attr("href", $nextImg );
-			  
-			  $image.attr("src", $currentLoc);
-			  
-			  var $nextText = $nextImg.children("img").attr("alt");
-			     $currentText.attr("alt", $nextText );
-  			
+		  var $currentLoc = $(".pic-nav li a").attr("href");
+		     $image.attr("src", $currentLoc );
 			 
-			$para.text( $currentText );
-			 
+			 console.log( $currentLoc );
+		  
+		  
+		  
 				 
-			     
-			  
+				 // get the next href and alt for next image //
+				 
+			
 	}
 					 
 		  $arrow1.click( function(e) {
@@ -123,7 +112,6 @@
 		  e.preventDefault();
 			e.stopPropagation();
 		
-		    console.log( getNxtImg() );
 		   
 					 });
 			
