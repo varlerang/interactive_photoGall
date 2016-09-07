@@ -92,16 +92,27 @@
 		 
 		
 		// I am getting the href and the alt from current image and hid it //
-		
-		
-		  var $currentLoc = $(".pic-nav li a").attr("href");
-		     $image.attr("src", $currentLoc );
-			 
-			 console.log( $currentLoc );
-		  
-		  
-		  
+		 
 				 
+		
+		  var $images = $(".pic-nav li a").click(function() {
+			  
+			 var $currentLoc =  $(this).parent().removeClass("selected");
+			   
+			     $currentLoc.attr("href");
+			   
+			     $(this).children("img").attr("alt");
+			   
+			  
+			  
+			  });
+		  
+			
+				console.log( $images ); 
+				 
+				 
+				 
+				
 				 // get the next href and alt for next image //
 				 
 			
@@ -112,6 +123,9 @@
 		  e.preventDefault();
 			e.stopPropagation();
 		
+		 getNxtImg();
+		 
+		  console.log( getNxtImg() );
 		   
 					 });
 			
