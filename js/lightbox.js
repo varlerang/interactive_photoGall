@@ -97,13 +97,18 @@
 		
 		  var $images = $(".pic-nav li a").click(function() {
 			  
-			 var $currentLoc =  $(this).parent().removeClass("selected");
+			 var $currentLoc =  $(this).parent().removeClass(".selected");
 			   
 			     $currentLoc.attr("href");
 			   
 			     $(this).children("img").attr("alt");
-			   
 			  
+			  var $nextLoc = $(".pic-nav li").siblings("a").next(); 
+			     $nextLoc.attr("href");
+				 
+				 $currentLoc.attr("href", $nextLoc ).className(".selected");
+			    
+				$image.attr("src", $currentLoc );
 			  
 			  });
 		  
