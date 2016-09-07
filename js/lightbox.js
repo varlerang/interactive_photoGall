@@ -29,63 +29,48 @@
 	 /***************************************************************/
 	
 	
-	 /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy			*/
+	 /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy WiTh Pic		*/
    
-   
-			  
-			  
-			  
+   			  
   $main.click( function(e) {
 				  
    e.preventDefault();
 			   
 				  
-			   
-  var imageLoc = $(this).attr("href");
-			   
-  
-				  
-				  var currentImg = $(this).parent("li");
+	    var imageLoc = $(this).attr("href");	   
+        var currentImg = $(this).parent("li");
+	    $image.attr("src", imageLoc);
+		$overlay.show();
+		$(this).addClass(" selected ");
 					 
-			   $image.attr("src", imageLoc);
-				   
-			   $overlay.show();
-			   
-			   $(this).addClass(" selected ");
-					 
-				   
-				   var captionTex = $(this).children("img").attr("alt");
-				   
-				   $(this).addClass(" selected");
+		var captionTex = $(this).children("img").attr("alt");
+		$(this).addClass(" selected");
 				 
-				   $para.text( captionTex );
+		$para.text( captionTex );
 				   
-		   });
+  });
 			 
-	  
-	  /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */	   
-			 
-		  /********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
+ /*  ________________________________________________________________________ */	  
+			  
+
+ /********************** cLiCk FuNcTiOn ThAt GeTs RiD Of OvErLaY ************* */
 	  
 		$overlay.click( function(e) {
+	   
+	    e.preventDefault();
 			
-			e.preventDefault();
-			
-			$overlay.hide();
+	    $overlay.hide();
 			
 		});
 			   
 					   
 	  /******************************************************************************/
 	  
-	  /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& aRrOw ClIcK LeFt ArRoW FuNcTiOn $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 	  
   
 				  
 			  
-	  /***************************
 	   
-	  **********************************************************************************/
 	  
 	function getNxtImg() {
 		"use strict";
@@ -95,26 +80,16 @@
 		 
 				 
 		
-		  var $images = $(".pic-nav li a").click(function() {
+		 
 			  
-			 var $currentLoc =  $(this).parent().removeClass(".selected");
+			     var $currentLoc =  $(".pic-nav li a");
 			   
-			     $currentLoc.attr("href");
+			     $currentLoc.children().attr("href");
 			   
-			     $(this).children("img").attr("alt");
-			  
-			  var $nextLoc = $(".pic-nav li").siblings("a").next(); 
-			     $nextLoc.attr("href");
-				 
-				 $currentLoc.attr("href", $nextLoc ).className(".selected");
 			    
-				$image.attr("src", $currentLoc );
 			  
-			  });
 		  
-			
-				console.log( $images ); 
-				 
+			console.log( $currentLoc );
 				 
 				 
 				
@@ -128,9 +103,8 @@
 		  e.preventDefault();
 			e.stopPropagation();
 		
-		 getNxtImg();
+		console.log( getNxtImg());
 		 
-		  console.log( getNxtImg() );
 		   
 					 });
 			
@@ -140,17 +114,7 @@
 	  
 
 	  
-  /**
-	  function getNextImage() {
-  imageParent = $(thisImage).parent().next();
-  if(imageParent.length!=0){
-  thisImage = $(imageParent).children("a");
-	// imageLocation = $(thisImage).attr("href");
-	// $image.attr("src", imageLocation);
-  }
-	  
-	  **/
-	  
+ 
 	  
 	  
   
