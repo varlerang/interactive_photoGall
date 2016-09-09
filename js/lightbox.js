@@ -13,7 +13,7 @@
 			var $para = $("<p></p>");
 			var $overlay = $("<div class='overlay'></div>");
 			var $main =  $(".pic-nav li a");
-			
+			var $img;
 		   
    //**************************************aPpEnDiNg ***********************************//
 	
@@ -47,7 +47,9 @@
 		$(this).addClass(" selected");
 				 
 		$para.text( captionTex );
-				   
+		
+		getCurrentImage( this );		   
+		
   });
 			 
  /*  ________________________________________________________________________ */	  
@@ -63,54 +65,52 @@
 			
 		});
 			   
+			
+			
+		$arrow1.click( function(e) {
+			
+			e.preventDefault();
+			e.proprogation();
+			
+			
+			getNxtImg();
+			
+			$image.show();
+			
+			
+		});
 					   
 	  /******************************************************************************/
+	    
 	  
-	  
-  
-				  
+     /* Function that gets the current image */
+		
+		function getCurrentImage( currentImg ) {
+			
+		   $img = currentImg.children("a");                                // get the image that the user clicked on.
+			var imgLocation = $( $img ).attr("href");					// gets the href/src value of the link the user clicked upon.
+			$image.attr("src", imgLocation );								// update the $image with the href which would be the src for the image.
+			
+		}
 			  
 	   
 	  
-	function getNxtImg() {
-		"use strict";
-		 
-		
-		// I am getting the href and the alt from current image and hid it //
-		 
-				 
-		
-		 
-			  
-			     var $currentLoc =  $(".pic-nav li a");
-			   
-			     $currentLoc.children().attr("href");
-			   
-			    
-			  
-		  
-			console.log( $currentLoc );
-				 
-				 
-				
-				 // get the next href and alt for next image //
-				 
-			
-	}
-					 
-		  $arrow1.click( function(e) {
-
-		  e.preventDefault();
-			e.stopPropagation();
-		
-		console.log( getNxtImg());
-		 
-		   
-					 });
-			
-					
-	  /************************************************************************************************************** */
+	 /********************************************************************************/
 	  
+	    function getNxtImg() {
+			
+		 var nextImgParent = $( $img ).parent().next();
+		   var nextImage =   $( nextImgParent ).children("a");
+		    var nextLocation = $(nextImage).attr("href");      		 		  // get the image location and set the image src to the href image location.
+			$image.attr("src", nextLocation );        							// set the src of the image to the next href
+			getCurrentImage( nextLocation ); 
+			
+		}
+		
+			
+			
+			
+		
 	  
 
 	  
