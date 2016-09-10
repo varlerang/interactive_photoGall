@@ -70,7 +70,8 @@
 		$arrow1.click( function(e) {
 			
 			e.preventDefault();
-			e.proprogation();
+			
+			e.stopPropagation();
 			
 			
 			getNxtImg();
@@ -87,7 +88,7 @@
 		
 		function getCurrentImage( currentImg ) {
 			
-		   $img = currentImg.children("a");                                // get the image that the user clicked on.
+		   $img = $(currentImg).children("a");                                // get the image that the user clicked on.
 			var imgLocation = $( $img ).attr("href");					// gets the href/src value of the link the user clicked upon.
 			$image.attr("src", imgLocation );								// update the $image with the href which would be the src for the image.
 			
