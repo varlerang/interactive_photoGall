@@ -104,7 +104,7 @@
 		   var nextImage =   $( nextImgParent ).children("a");
 		    var nextLocation = $(nextImage).attr("href");      		 		  // get the image location and set the image src to the href image location.
 			$image.attr("src", nextLocation );        							// set the src of the image to the next href
-			getCurrentImage( nextLocation ); 
+			getCurrentImage( nextImgParent ); 
 			
 		}
 		
