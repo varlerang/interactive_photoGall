@@ -37,9 +37,9 @@
    e.preventDefault();
 			   
 				  
-	    var imageLoc = $(this).attr("href");	   
+	    $img = $(this).attr("href");	   
         var currentImg = $(this).parent("li");
-	    $image.attr("src", imageLoc);
+	    $image.attr("src", $img);
 		$overlay.show();
 		$(this).addClass(" selected ");
 					 
@@ -48,7 +48,7 @@
 				 
 		$para.text( captionTex );
 		
-		getCurrentImage( this );		   
+		getCurrentImage( $(this) );		   
 		
   });
 			 
