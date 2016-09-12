@@ -70,7 +70,6 @@
 		$arrow1.click( function(e) {
 			
 			e.preventDefault();
-			
 			e.stopPropagation();
 			
 			
@@ -83,17 +82,18 @@
 					   
 	  /******************************************************************************/
 	    
+		
 	  
      /* Function that gets the current image */
 		
 		function getCurrentImage( currentImg ) {
 			
-		   $img = $(currentImg).children("a");                                // get the image that the user clicked on.
-			var imgLocation = $( $img ).attr("href");					// gets the href/src value of the link the user clicked upon.
-			$image.attr("src", imgLocation );								// update the $image with the href which would be the src for the image.
+		   $img = $(currentImg).children("a");                                 // get the image that the user clicked on.
+		   var imgLocation = $( $img ).attr("href");					       // gets the href/src value of the link the user clicked upon.
+		   $image.attr("src", imgLocation );								   // update the $image with the href which would be the src for the image.
 			
 		}
-			  
+			 console.log( imgLocation ); 
 	   
 	  
 	 /********************************************************************************/
@@ -101,15 +101,17 @@
 	    function getNxtImg() {
 			
 		 var nextImgParent = $( $img ).parent().next();
-		   var nextImage =   $( nextImgParent ).children("a");
-		    var nextLocation = $(nextImage).attr("href");      		 		  // get the image location and set the image src to the href image location.
-			$image.attr("src", nextLocation );        							// set the src of the image to the next href
-			getCurrentImage( nextImgParent ); 
+		 var nextImage =   $( nextImgParent ).children("a");
+		 var nextLocation = $(nextImage).attr("href");      		 		    // get the image location and set the image src to the href image location.
+		 $image.attr("src", nextLocation );        							    // set the src of the image to the next href
+		 getCurrentImage( nextImgParent ); 
 			
 		}
 		
 			
-			
+			console.log( nextImgParent );
+			console.log( nextImage );
+			console.log( nextLocation);
 			
 		
 	  
