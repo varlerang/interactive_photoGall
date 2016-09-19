@@ -13,8 +13,7 @@
 			var $para = $("<p></p>");
 			var $overlay = $("<div class='overlay'></div>");
 			var $main =  $(".pic-nav li a");
-			var $img;
-		   
+		   var $img;
    //**************************************aPpEnDiNg ***********************************//
 	
 	 $photoViewer.append( $image );
@@ -88,12 +87,13 @@
 		
 		function getCurrentImage( currentImg ) {
 			
-		   $img = $(currentImg).children("a");                                 // get the image that the user clicked on.
-		   var imgLocation = $( $img ).attr("href");					       // gets the href/src value of the link the user clicked upon.
-		   $image.attr("src", imgLocation );								   // update the $image with the href which would be the src for the image.
-			
+			 $img = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
+		   var $imgLocation = $( $img ).attr("href");					       // gets the href/src value of the link the user clicked upon.
+		   $image.attr("src", $imgLocation );								   // update the $image with the href which would be the src for the image.
+		   
+						 console.log( $imgLocation ); 
+
 		}
-			 console.log( imgLocation ); 
 	   
 	  
 	 /********************************************************************************/
@@ -106,12 +106,14 @@
 		 $image.attr("src", nextLocation );        							    // set the src of the image to the next href
 		 getCurrentImage( nextImgParent ); 
 			
-		}
-		
 			
-			console.log( nextImgParent );
+				console.log( nextImgParent );
 			console.log( nextImage );
 			console.log( nextLocation);
+			
+		
+		}
+		
 			
 		
 	  
