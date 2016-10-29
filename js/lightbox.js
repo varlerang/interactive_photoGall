@@ -14,8 +14,7 @@
 			var $overlay = $("<div class='overlay'></div>");
 			var $main =  $(".pic-nav li a");
 			
-		     var $img;
-		   
+		     
    //**************************************aPpEnDiNg ***********************************//
 	
 	 $photoViewer.append( $image );
@@ -38,7 +37,7 @@
    e.preventDefault();
 			   
 				  
-	    $img = $(this).attr("href");	   
+	   var $img = $(this).attr("href");	   
         var currentImg = $(this).parent("li");
 	    $image.attr("src", $img);
 		$overlay.show();
@@ -49,7 +48,7 @@
 				 
 		$para.text( captionTex );
 		
-		getCurrentImage( $img  );		   
+		getCurrentImage();		   
 		
   });
 			 
@@ -87,32 +86,22 @@
 	  
      /* Function that gets the current image */
 		
-		function getCurrentImage( currentImg ) {
+		function getCurrentImage() {
 			
-			 $img = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
-		   var $imgLocation = $( $img ).attr("href");					       // gets the href/src value of the link the user clicked upon.
-		   $image.attr( "src", $imgLocation );								   // update the $image with the href which would be the src for the image.
+			 $currentImg = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
+		     $currentImg.attr("href");					       // gets the href/src value of the link the user clicked upon.
+		     $image.attr( "src", $currentImg );								   // update the $image with the href which would be the src for the image.
 		   
-			
-						 console.log( $imgLocation ); 
-
-		}
+		     $currentCap = $(" .pic-nav li").children("img").attr("alt");
+			 $para.text( $currentCap );
+			 
+	   }
 	   
 	  
 	 /********************************************************************************/
 	  
 	    function getNxtImg() {
-			
-		 var nextImgParent = $( $img ).parent().next();
-		 var nextImage =   $( nextImgParent ).children("a");
-		 var nextLocation = $(nextImage).attr("href").addClass("selected");      		 		    // get the image location and set the image src to the href image location.
-		 $image.attr("src", nextLocation );        							    // set the src of the image to the next href
-		 getCurrentImage( nextImgParent ); 
-			
-			
-				console.log( nextImgParent );
-			console.log( nextImage );
-			console.log( nextLocation);
+		
 			
 		
 		}
