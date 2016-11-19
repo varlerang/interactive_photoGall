@@ -85,11 +85,11 @@
 		
 		function getCurrentImage() {
 			
-			 $currentImg = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
+			var $currentImg = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
 		     $currentImg.attr("href");					       // gets the href/src value of the link the user clicked upon.
 		     $image.attr( "src", $currentImg );								   // update the $image with the href which would be the src for the image.
 		   
-		     $currentCap = $(" .pic-nav li").children("img");
+		 var $currentCap = $(" .pic-nav li").children("img");
 			 
 			  $currentCap.attr("alt");
 			  
@@ -101,7 +101,13 @@
 	 /********************************************************************************/
 	  
 	  
-	  
+	   function getNextImage() {
+		   
+		   
+		   
+		   
+		   
+	   }
 
 	  
  
