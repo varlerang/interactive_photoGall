@@ -73,10 +73,7 @@
 			e.stopPropagation();
 			
 			
-			getNxtImg();
-			
-			$image.show();
-			
+		
 			
 		});
 					   
@@ -92,7 +89,10 @@
 		     $currentImg.attr("href");					       // gets the href/src value of the link the user clicked upon.
 		     $image.attr( "src", $currentImg );								   // update the $image with the href which would be the src for the image.
 		   
-		     $currentCap = $(" .pic-nav li").children("img").attr("alt");
+		     $currentCap = $(" .pic-nav li").children("img");
+			 
+			  $currentCap.attr("alt");
+			  
 			 $para.text( $currentCap );
 			 
 	   }
@@ -100,14 +100,7 @@
 	  
 	 /********************************************************************************/
 	  
-	    function getNxtImg() {
-		
-			
-		
-		}
-		
-			
-		
+	  
 	  
 
 	  
