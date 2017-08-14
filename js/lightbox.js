@@ -25,8 +25,13 @@
 	 $overlay.append( $wrapper );
 	 $("body").append( $overlay );
 	 $overlay.hide();
-	
+	 
 	 /***************************************************************/
+	
+	
+	 var $allImages = $("#allImages").children("li");
+	  var $currentImageIndex = 0;
+				  
 	
 	
 	 /* iMaGe CliCk FuNcTiOn ShOwInG oVeRlAy WiTh Pic		*/
@@ -35,8 +40,7 @@
   $main.click( function(e) {
 				  
    e.preventDefault();
-			   
-				  
+			  
 	   var $img = $(this).attr("href");	   
         var currentImg = $(this).parent("li");
 	    $image.attr("src", $img);
@@ -48,7 +52,7 @@
 				 
 		$para.text( captionTex );
 		
-		getCurrentImage();		   
+		   
 		
   });
 			 
@@ -83,19 +87,7 @@
 	  
      /* Function that gets the current image */
 		
-		function getCurrentImage() {
-			
-			var $currentImg = $(".pic-nav li").children("a");                                 // get the image that the user clicked on.
-		     $currentImg.attr("href");					       // gets the href/src value of the link the user clicked upon.
-		     $image.attr( "src", $currentImg );								   // update the $image with the href which would be the src for the image.
-		   
-		 var $currentCap = $(" .pic-nav li").children("img");
-			 
-			  $currentCap.attr("alt");
-			  
-			 $para.text( $currentCap );
-			 
-	   }
+	
 	   
 	  
 	 /********************************************************************************/
